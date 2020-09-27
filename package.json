@@ -4,7 +4,9 @@
   "description": "Project 2 Ironhack: create an app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www",
+    "server": "nodemon ./bin/www -e js,hbs"
   },
   "repository": {
     "type": "git",
@@ -18,9 +20,16 @@
   },
   "homepage": "https://github.com/KiwiMantelli/my-timeline-project2#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.2.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "hbs": "^4.1.1",
-    "mongoose": "^5.10.7"
+    "mongoose": "^5.10.7",
+    "morgan": "^1.10.0"
   }
 }
