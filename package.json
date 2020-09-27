@@ -1,5 +1,5 @@
 {
-  "name": "My-timeline-Project2",
+  "name": "my-timeline-project2",
   "version": "1.0.0",
   "description": "Project 2 Ironhack: create an app",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KiwiMantelli/My-timeline-Project2.git"
+    "url": "git+https://github.com/KiwiMantelli/my-timeline-project2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KiwiMantelli/My-timeline-Project2/issues"
+    "url": "https://github.com/KiwiMantelli/my-timeline-project2/issues"
   },
-  "homepage": "https://github.com/KiwiMantelli/My-timeline-Project2#readme",
+  "homepage": "https://github.com/KiwiMantelli/my-timeline-project2#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
