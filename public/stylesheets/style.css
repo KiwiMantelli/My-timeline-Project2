@@ -1,17 +1,19 @@
 @import './form.css';
 @import './home.css';
+@import './time_event_form.css';
+@import '. /user_form.css';
 
 @font-face {
     font-family: boogaloo;
-    src: url("/boogaloo.ttf");
+    src: url("../font/boogaloo.ttf");
 };
 @font-face {
-    font-family: sue;
-    src: url("sue.ttf");
+    font-family: "sue";
+    src: url("../font/sue.ttf");
 }
 @font-face {
     font-family: molle;
-    src: url("/molle.ttf");
+    src: url("../font/molle.ttf");
 }
 
 *{

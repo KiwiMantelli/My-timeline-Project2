@@ -1,4 +1,35 @@
 @import './navbar.css';
 body {
-    background-color: #EDEADB;
+    background-image: linear-gradient(to bottom, #EDEADB 70%, white 30%);
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+
 }
+
+header {
+    font-family: "sue";
+}
+
+.display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    height: 70vh;
+    margin: 10vh auto 10vh 10vh;
+    border-radius: 10%;
+}
+
+#wanna-see {
+    margin: 40vh 40vh 10vh auto;
+    width: 30vh;
+    height: 30vh;
+    background-color: #FFD1B3;
+    border-radius: 100%;
+    text-align: center;
+    font-family: boogaloo;
+    font-size: 5vh;
+}
+
