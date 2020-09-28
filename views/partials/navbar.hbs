@@ -1,10 +1,14 @@
 <nav class="nav">
     <a id="nav-link-home" href="/home"> Home</a>
     {{#if isLoggedIn}}
+    <div id="left-nav">
     <a class="nav-link" href="/dashboard">My timelines</a>
     <a class="nav-link" href="/logout"> Logout</a>
+    </div>
     {{else}}
-    <a class="nav-link" href="/signin"> Signin</a>
-    <a class="nav-link" href="/signup"> Signup</a>
+    <div id="left-nav">
+    <a class="nav-link" href="/signin"> Log in</a>
+    <a class="nav-link" href="/signup"> Sign up</a>
+    </div>
     {{/if}}
 </nav>

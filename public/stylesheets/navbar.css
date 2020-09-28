@@ -3,13 +3,22 @@
     position: relative;
     height: 7vh;
     background: #FFFEFE;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    font-family: sue;
+    font-family: boogaloo;
+    font-size: 4vh;
     padding: 8px 10px;
 }
 
-.nav > a {
+#nav-link-home {
     text-decoration: none;
     color: #333333;
+    margin-left: 5vh;
 }
+
+.nav-link {
+    text-decoration: none;
+    color: #333333;
+    margin-right: 5vh;
+}
+

@@ -6,30 +6,97 @@ body {
 
 }
 
-header {
-    font-family: "sue";
+#my-life {
+    position: absolute;
+    font-family: molle;
+    font-size: 12vh;
+    margin: 5vh auto 0vh 10vh;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#line {
+    position: relative;
+    width: 125vh;
+    height: 0.5vh;
+    left: 0px;
+    top: 19vh;
+    background-color: #D09D7C;
+    border: 0vh solid #D09D7C;
+}
+
+#ball {
+    position: absolute;
+    width: 2.5vh;
+    height: 2.5vh;
+    border-radius: 100%;
+    left: 124vh;
+    top: 25vh;
+    background-color: #D09D7C;
+    border: 0vh solid #D09D7C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#timeline {
+    position: relative;
+    font-family: sue;
+    font-size: 12vh;
+    margin: 10vh auto 5vh 60vh;
+    height: 12vh;
+    text-shadow: 6px 6px 7px #CFCBCB;
+}
+
+#slogan {
+    position: relative;
+    font-family: sue;
+    font-size: 5vh;
+    margin: auto auto 0vh 60vh;
 }
 
 .display {
+    height: 40vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
 }
 
-img {
-    height: 70vh;
-    margin: 10vh auto 10vh 10vh;
+#home-skyline {
+    position: static;
+    height: 55vh;
+    margin-left: 20vh;
     border-radius: 10%;
 }
 
-#wanna-see {
-    margin: 40vh 40vh 10vh auto;
+#wanna-see-ball {
+
+    position: static;
+    margin: 30vh 40vh 13vh 15vh;
     width: 30vh;
     height: 30vh;
     background-color: #FFD1B3;
     border-radius: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+#wanna-see-text {
+    position: absolute;
+    margin: 38vh auto 0vh 5vh;
+    height: 30vh;
     text-align: center;
     font-family: boogaloo;
-    font-size: 5vh;
+    font-size: 6vh;
+}
+
+#check {
+    position: absolute;
+    margin: 43vh 15vh auto 20vh;
+    height: 30vh;
+    text-align: center;
+    text-decoration: none;
+    font-family: sue;
+    font-size: 6vh;
+    color: black;
 }
 
