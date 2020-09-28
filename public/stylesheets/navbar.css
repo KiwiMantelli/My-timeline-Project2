@@ -1,0 +1,6 @@
+.nav {
+    display: flex;
+    position: relative;
+    justify-content: left;
+    background: #FFFEFE;
+}

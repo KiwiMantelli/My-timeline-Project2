@@ -1,20 +1,22 @@
 @import './form.css';
+@import './home.css';
+
+@font-face {
+    font-family: boogaloo;
+    src: url("/boogaloo.ttf");
+};
+@font-face {
+    font-family: sue;
+    src: url("sue.ttf");
+}
+@font-face {
+    font-family: molle;
+    src: url("/molle.ttf");
+}
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    @font-face {
-        font-family: Boogaloo;
-        src: url("/public/font/Boogaloo-regular.ttf");
-    };
-    @font-face {
-        font-family: Sue Ellen Francisco;
-        src: url("/public/font/SueEllenFrancisco-Regular.ttf");
-    }
-    @font-face {
-        font-family: Molle;
-        src: url("/public/font/Molle-Italic.ttf");
-    }
-
+    
 }
