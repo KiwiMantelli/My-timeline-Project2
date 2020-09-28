@@ -1,7 +1,7 @@
 
 @import './home.css';
 @import './time_event_form.css';
-@import '. /user_form.css';
+@import './user_form.css';
 
 @font-face {
     font-family: boogaloo;

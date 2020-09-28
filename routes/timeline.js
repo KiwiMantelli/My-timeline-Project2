@@ -16,6 +16,13 @@ router.get("/:id/edit", (req, res, next) => {
     res.render("timeline-edit", { title: "Edit Timeline" });
   });
 
+router.get("/:id/display", (req, res, next) => {
+    res.render("timelineDisplay", { title: "My Timeline", css: ["timeline-styles"] });
+  });
+
+
+//Event Routes  
+
 router.get("/event/create", (req, res, next) => {
     res.render("create-event", { title: "Create New Event" });
   });
