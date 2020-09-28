@@ -1,28 +1,30 @@
-<section class="sign form-container">
-  <header class="form-header">
+<section class="container-sign">
+
+
+  <form method="post" action="/signup" class="user_form">
     <h1 class="form-title">Start your timeline journey</h1>
     <p class="form-subtitle">Enjoy yourself and be comfortable </p>
-  </header>
 
-  <form method="post" action="/signup" id="form_user">
-    <div class="form-item-wrapper flexed-item">
-      <label for="firstname" class="label-ref label">Name</label>
-      <input id="firstname" type="text"  name="name"class="input-text input" placeholder="Albert" required>
+    <div class="form-item-wrapper">
+      <label for="firstname" class="label">Name</label>
+      <input id="firstname" type="text" name="name" class="input-text input" placeholder="Albert" required>
     </div>
-    <div class="form-item-wrapper flexed-item">
-      <label for="lastname" class="label-ref label">Last Name</label>
-      <input id="lastname" type="text" name="lastname"class="input-text input" placeholder="Biceps" required>
+    <div class="form-item-wrapper">
+      <label for="lastname" class="label">Last Name</label>
+      <input id="lastname" type="text" name="lastname" class="input-text input" placeholder="Biceps" required>
     </div>
-    <div class="form-item-wrapper flexed-item">
-      <label for="email" class="label-ref label">Email</label>
-      <input id="email" type="email" name="email"class="input-text input" placeholder="albert.biceps@gmail.com" required>
+    <div class="form-item-wrapper">
+      <label for="email" class="label">Email</label>
+      <input id="email" type="email" name="email" class="input-text input" placeholder="albert.biceps@gmail.com"
+        required>
     </div>
-    <div class="form-item-wrapper flexed-item">
+    <div class="form-item-wrapper">
       <label for="password" class="label-ref label">Password</label>
-      <input id="password" type="password" name="password"class="input-text input" placeholder="••••••" required value="1234">
+      <input id="password" type="password" name="password" class="input-text input" placeholder="••••••" required
+        value="1234">
     </div>
-    <button class="btn">Create Account</button>
+    <button class="btn">Create account!</button>
   </form>
   <p class="form-sub-infos">Already have an account ? <a href="/signin" class="button-link-form">Sign In</a></p>
- 
+
 </section>

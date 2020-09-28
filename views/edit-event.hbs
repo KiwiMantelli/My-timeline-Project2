@@ -1,28 +1,30 @@
-<div class="big-container product-manage-wrapper flexed-item">
-  <form method="post" action="/general-create" class="create-general-form" enctype="multipart/form-data">
-    <h3 class="form-title"> Create an event</h3>
+<div class="big-container">
+  <form method="post" action="/general-create" class="event-form" enctype="multipart/form-data">
+    <h3 class="form-title"> Edit an event</h3>
     {{>catEditPartials}}
-    <div class="form-item-wrapper flexed-item"></div>
-    <label for="event-rating" class="label-tags label hidden">Rating</label>
-    <span><input type="radio" name="rating" id="str5" value="{{event.rating}}"><label for="str5"></label></span>
-    <span><input type="radio" name="rating" id="str4" value="{{event.rating}}"><label for="str4"></label></span>
-    <span><input type="radio" name="rating" id="str3" value="{{event.rating}}"><label for="str3"></label></span>
-    <span><input type="radio" name="rating" id="str2" value="{{event.rating}}"><label for="str2"></label></span>
-    <span><input type="radio" name="rating" id="str1" value="{{event.rating}}"><label for="str1"></label></span>
-</div>
-<div class="form-item-wrapper flexed-item">
-  <label for="event-review" class="label-review label hidden">Review</label>
-  <input id="event-review" type="text" class="event-review input" name="review" placeholder="give your opinion" "{{event.review}}">
-</div>
-<div class="form-item-wrapper flexed-item">
-  <label for="event-author" class="label-author label hidden">Author or director</label>
-  <input id="event-author" type="text" class="event-author input" name="author" placeholder="director or author" "{{event.author}}">
-</div>
-<div class="map hidden">{{event.map}}</div>
-<div class="form-item-wrapper flexed-item"></div>
-<label for="event-people" class="label-people label hidden">People</label>
-<input id="event-people" type="text" class="event-people" name="people" placeholder="ex: people who was with you" "{{event.people}}">
-</div>
-<button class="btn">Create this event</button>
-</form>
+    <div>
+      <label for="event-rating" class="label hidden">Rating:</label>
+      <span>
+        <input type="radio" name="rating" id="str5" class="hidden" value="{{event.rating}}"><label for="str5"></label>
+        <input type="radio" name="rating" id="str4" class="hidden" value="{{event.rating}}"><label for="str4"></label>
+        <input type="radio" name="rating" id="str3" class="hidden" value="{{event.rating}}"><label for="str3"></label>
+        <input type="radio" name="rating" id="str2" class="hidden" value="{{event.rating}}"><label for="str2"></label>
+        <input type="radio" name="rating" id="str1" class="hidden" value="{{event.rating}}"><label for="str1"></label>
+      </span>
+    </div>
+
+    <input id="event-review" type="text" class="event-review input hidden" name="review" placeholder="give your opinion"
+      value="{{event.review}}">
+
+
+    <input id="event-author" type="text" class="event-author input hidden" name="author" placeholder="director or author"
+      value="{{event.author}}">
+
+    <div class="map hidden">{{event.map}}</div>
+
+    <input id="event-people" type="text" class="event-people input hidden" name="people" placeholder="people who was with you"
+      value="{{event.people}}">
+
+    <button class="btn">Create!</button>
+  </form>
 </div>

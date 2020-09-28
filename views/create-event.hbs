@@ -1,28 +1,29 @@
-<div class="big-container product-manage-wrapper flexed-item">
-  <form method="post" action="/general-create" class="create-general-form" enctype="multipart/form-data">
+<div class="big-container">
+  <form method="post" action="/general-create" class="event-form" enctype="multipart/form-data">
     <h3 class="form-title"> Create an event</h3>
-    {{> catCreatePartials}} 
-    <div class="form-item-wrapper flexed-item"></div>
-    <label for="event-rating" class="label-tags label hidden">Rating</label>
-    <span><input type="radio" name="rating" id="str5" value="5"><label for="str5"></label></span>
-    <span><input type="radio" name="rating" id="str4" value="4"><label for="str4"></label></span>
-    <span><input type="radio" name="rating" id="str3" value="3"><label for="str3"></label></span>
-    <span><input type="radio" name="rating" id="str2" value="2"><label for="str2"></label></span>
-    <span><input type="radio" name="rating" id="str1" value="1"><label for="str1"></label></span>
-</div>
-<div class="form-item-wrapper flexed-item">
-  <label for="event-review" class="label-review label hidden">Review</label>
-  <input id="event-review" type="text" class="event-review input" name="review" placeholder="give your opinion">
-</div>
-<div class="form-item-wrapper flexed-item">
-  <label for="event-author" class="label-author label hidden">Author or director</label>
-  <input id="event-author" type="text" class="event-author input" name="author" placeholder="director or author">
-</div>
-<div class="map hidden"></div>
-<div class="form-item-wrapper flexed-item"></div>
-<label for="event-people" class="label-people label hidden">People</label>
-<input id="event-people" type="text" class="event-people" name="people" placeholder="ex: people who was with you">
-</div>
-<button class="btn">Create this event</button>
-</form>
+    {{> catCreatePartials}}
+    <div class="form-item-rating">
+      <label for="event-rating" class="label-tags label hidden">Rating:</label>
+      <span>
+        <input type="radio" name="rating" id="str5" class="hidden" value="5">
+        <input type="radio" name="rating" id="str4" class="hidden" value="4">
+        <input type="radio" name="rating" id="str3" class="hidden" value="3">
+        <input type="radio" name="rating" id="str2" class="hidden" value="2">
+        <input type="radio" name="rating" id="str1" class="hidden" value="1">
+      </span>
+    </div>
+
+    <input id="event-review" type="text" class="event-review input hidden" name="review"
+      placeholder="give your opinion">
+
+    <input id="event-author" type="text" class="event-author input hidden" name="author"
+      placeholder="director or author">
+
+    <div class="map hidden"></div>
+
+    <input id="event-people" type="text" class="event-people input hidden" name="people"
+      placeholder="ex: people who was with you">
+
+    <button class="btn">Create!</button>
+  </form>
 </div>
