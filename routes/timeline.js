@@ -1,20 +1,26 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
+const Timeline = require("../models/Timeline");
 
-router.get("/create", function (req, res, next) {
+router.get("/create", (req, res, next) => {
   res.render("timeline-create", { title: "Create New Timeline" });
 });
 
-router.get("/edit/:id", function (req, res, next) {
+router.post("/create", async(req, res, next) => {
+    res.send("New Timeline Create Route");
+    //console.log(req.body);
+    //Logic to be added
+})
+
+router.get("/:id/edit", (req, res, next) => {
     res.render("timeline-edit", { title: "Edit Timeline" });
   });
 
-router.get("/event/create", function (req, res, next) {
+router.get("/event/create", (req, res, next) => {
     res.render("create-event", { title: "Create New Event" });
-    //res.send("Create Event")
   });
 
-router.get("/event/edit/:id", function (req, res, next) {
+router.get("/event/:id/edit", (req, res, next) => {
     res.render("edit-event", { title: "Edit Event" });
   });
 
