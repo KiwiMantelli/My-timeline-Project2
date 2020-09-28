@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    @font-face {
+        font-family: Boogaloo;
+        src: url("/public/font/Boogaloo-regular.ttf");
+    };
+    @font-face {
+        font-family: Sue Ellen Francisco;
+        src: url("/public/font/SueEllenFrancisco-Regular.ttf");
+    }
+    @font-face {
+        font-family: Molle;
+        src: url("/public/font/Molle-Italic.ttf");
+    }
+
+}
