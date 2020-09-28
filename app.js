@@ -39,7 +39,8 @@ app.use(cookieParser());
 app.use(flash());
 
 // routers
-app.use("/", require("./routes/home"));
+app.use("/", require("./routes/index"));
 app.use("/", require("./routes/auth"));
+app.use("/timeline", require("./routes/timeline"));
 
 module.exports = app;
