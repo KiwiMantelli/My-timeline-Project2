@@ -1,19 +1,24 @@
-<h1 id="my-timelines">My timelines</h1>
+<h1 id="my-timelines">my timelines</h1>
+<hr id="dashboard-line">
+<div id="dashboard-ball"></div>
 
+<div id="display-dashboard">
 <table class="table">
-
     <tbody>
         {{#each timelines}}
         <tr>   
             <td class="category">{{this.category}}</td>
-            <td class="timeline-title">{{this.name}}</td>
-            <td data-id="{{this._id}}"><a href="timeline/{{this._id}}/display"><img class="icon" src="/assets/eye.png" alt="icon view"/></td>
-            <td data-id="{{this._id}}"  class="delete"><a href="/timeline/{{this._id}}/delete"><img class="icon" src="/assets/delete-icon.png" alt=""></a></td>
+            <td class="tl-dash-title">{{this.name}}</td>
+            <td id="eye" data-id="{{this._id}}"><a href="timeline/{{this._id}}/display"><img class="icon" src="/assets/eye.png" alt="icon view"/></td>
             <td data-id="{{this._id}}" class="edit"><a href="/timeline/{{this._id}}/edit"><img class="icon" src="/assets/edit-icon.png" alt=""></a></td>
+            <td data-id="{{this._id}}"  class="delete"><a href="/timeline/{{this._id}}/delete"><img class="icon" src="/assets/delete-icon.png" alt=""></a></td>
         </tr>
         {{/each}}
     </tbody>
-
 </table>
 
-<button class="btn"><a href="/timeline/create">create a timeline</a></button>
+<div id="display-right">
+    <img id="dash-img" src="/assets/skyline.jpg" alt="skyline" />
+<button id="create-timeline" class="btn"><a href="/timeline/create">Create a timeline</a></button>
+</div>
+</div>
