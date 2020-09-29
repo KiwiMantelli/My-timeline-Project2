@@ -42,6 +42,7 @@ app.use(flash());
 app.use("/", require("./routes/index"));
 app.use("/", require("./routes/auth"));
 app.use("/timeline", require("./routes/timeline"));
+app.use("/timeline/event", require("./routes/event"))
 
 //MIDDLEWARES
 app.use(require("./middlewares/exposeFlashMessage"));
