@@ -7,9 +7,13 @@ router.get("/create", (req, res, next) => {
 });
 
 router.post("/create", async(req, res, next) => {
-    res.send("New Timeline Create Route");
-    //console.log(req.body);
-    //Logic to be added
+    try {
+        const newTimeline = await Timeline.create(req.body);
+        res.redirect("/dashboard");
+    }
+    catch(error) {
+        next(error);
+    }  
 })
 
 router.get("/:id/edit", (req, res, next) => {

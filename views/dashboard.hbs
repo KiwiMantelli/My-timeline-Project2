@@ -1,12 +1,14 @@
 <table class="table">
 
     <tbody>
+        {{#each timelines}}
         <tr>   
             <td class="category">{{this.category}}</td>
-            <td class="timeline-title">{{this.timeline-name}}</td>
-            <td data-id="{{this._id}}" class="delete"><i class="far fa-trash-alt"></i></td>
-            <td data-id="{{this._id}}" class="edit"><i class="far fa-edit"></i></td>
+            <td class="timeline-title">{{this.name}}</td>
+            <td data-id="{{this._id}}"  class="delete"><img class="icon" src="/assets/delete-icon.png" alt=""></td>
+            <td data-id="{{this._id}}" class="edit"><img class="icon" src="/assets/edit-icon.png" alt=""></td>
         </tr>
+        {{/each}}
     </tbody>
 
 </table>
