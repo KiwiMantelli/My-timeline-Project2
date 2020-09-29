@@ -1,7 +1,6 @@
-
 <div class="event-detail">
-    <a href="/timeline/:id/display">Go back</a>
-    <p>{{idDetails.title}}</p>
+    <h1 class="title-view">Event view</h1>
+    <h2>{{idDetails.title}}</h2>
     <p>{{idDetails.date}}</p>
     <p>{{idDetails.description}}</p>
     <img src="{{idDetails.image}}" class="img-event" alt="image event">
@@ -10,6 +9,12 @@
     <p>{{idDetails.author}}</p>
     <p>{{idDetails.map}}</p>
     <p>{{idDetails.people}}</p>
-    <a href="/timeline/event/{{idDetails._id}}/edit"><img src="/assets/edit-icon.png" class="icon" alt="edit icon"/></a>
-    <a href="/timeline/event/{{idDetails._id}}/delete"><img src="/assets/delete-icon.png" class="icon" alt="delete icon"/></a>
+    <div>
+        <a href="/timeline/event/{{idDetails._id}}/edit"><img src="/assets/edit-icon.png" class="icon"
+                alt="edit icon" /></a>
+        <a href="/timeline/event/{{idDetails._id}}/delete"><img src="/assets/delete-icon.png" class="icon"
+                alt="delete icon" /></a>
+    </div>
+
+<button class="btn"><a href="/timeline/:id/display">Go back</a></button>
 </div>

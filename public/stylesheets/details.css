@@ -1,0 +1,24 @@
+/* .container-event {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  margin: auto;
+  text-align: center;
+  font-family: Boogaloo;
+} */
+
+.event-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-view {
+  font-family: Boogaloo;
+  letter-spacing: 0.25rem;
+  font-size: 3rem;
+}

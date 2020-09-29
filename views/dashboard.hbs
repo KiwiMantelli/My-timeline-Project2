@@ -5,6 +5,7 @@
         <tr>   
             <td class="category">{{this.category}}</td>
             <td class="timeline-title">{{this.name}}</td>
+            <td data-id="{{this._id}}"><a href="timeline/{{this._id}}/display"><img class="icon" src="/assets/eye.png" alt="icon view"/></td>
             <td data-id="{{this._id}}"  class="delete"><a href="/timeline/{{this._id}}/delete"><img class="icon" src="/assets/delete-icon.png" alt=""></a></td>
             <td data-id="{{this._id}}" class="edit"><a href="/timeline/{{this._id}}/edit"><img class="icon" src="/assets/edit-icon.png" alt=""></a></td>
         </tr>
@@ -13,4 +14,4 @@
 
 </table>
 
-<button class="btn">create a timeline</button>
+<button class="btn"><a href="/timeline/create">create a timeline</a></button>

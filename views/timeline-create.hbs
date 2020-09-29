@@ -2,11 +2,17 @@
 
   <form method="post" action="/timeline/create" class="timeline-form">
     <h3 class="form-title"> Create Timeline</h3>
-    
+
     <input id="timeline-name" type="text" class="input-text input" name="name" required placeholder="title">
-   
-    <input id="timeline-cat" type="text" class="input-text input" name="category" required placeholder="category: trips">
-    
+
+    <select id="category" name="category" class="select" required>
+      <option value="-1" disabled selected>Choose a category</option>
+      <option value="general">General</option>
+      <option value="trips">Trips</option>
+      <option value="books">Books/Movies/Series</option>
+      <option value="family">Family</option>
+    </select>
+
 
     <button class="btn">Create!</button>
   </form>

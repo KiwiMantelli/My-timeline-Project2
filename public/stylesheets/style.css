@@ -3,6 +3,7 @@
 @import './time_event_form.css';
 @import './signin-signup.css';
 @import './demo.css';
+@import './details.css';
 
 @font-face {
     font-family: boogaloo;
