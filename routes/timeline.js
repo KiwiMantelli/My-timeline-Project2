@@ -9,7 +9,7 @@ router.get("/create", (req, res, next) => {
 router.post("/create", async (req, res, next) => {
   try {
     const newTimeline = await Timeline.create(req.body);
-    res.redirect("/dashboard");
+    res.redirect("/timeline/event/create");
   } catch (error) {
     next(error);
   }
