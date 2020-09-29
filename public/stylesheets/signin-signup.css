@@ -1,0 +1,51 @@
+.container-sign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.user_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 70vh;
+  margin-bottom: 40px;
+}
+
+.form-subtitle {
+  margin-bottom: 30px;
+}
+
+.form-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.btn-signup {
+  font-family: "sue";
+  font-size: 30px;
+  width: 200px;
+  height: 70px;
+  background: #ffd1b3;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 19px;
+  margin-top: 20px;
+ 
+}
+
+.label {
+  font-family: Boogaloo;
+  font-size: 20px;
+}
+
+.form-sub-infos{
+  font-family: Boogaloo;
+  font-size: 20px;
+}

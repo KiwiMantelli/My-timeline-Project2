@@ -33,7 +33,7 @@ router.post("/signin", async (req, res, next) => {
 
       const isLoggedIn = true;
 
-      res.render("timelineDisplay", { isLoggedIn });
+      res.render("dashboard", { isLoggedIn });
     }
   }
 });
@@ -44,8 +44,7 @@ router.get("/signup", (req, res, next) => {
 });
 
 router.post("/signup", async (req, res, next) => {
-  res.send("Sign up form sent");
-  //To be completed
+  
   try {
     const newUser = req.body;
 
@@ -58,7 +57,7 @@ router.post("/signup", async (req, res, next) => {
       const hashedPassword = bcrypt.hashSync(newUser.password, salt);
       newUser.password = hashedPassword;
       const user = await User.create(newUser);
-      res.redirect("/signup");
+      res.redirect("/signin");
     }
   } catch (error) {
     next(error);
