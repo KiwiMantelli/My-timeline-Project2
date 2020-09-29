@@ -5,8 +5,8 @@
         <tr>   
             <td class="category">{{this.category}}</td>
             <td class="timeline-title">{{this.name}}</td>
-            <td data-id="{{this._id}}"  class="delete"><img class="icon" src="/assets/delete-icon.png" alt=""></td>
-            <td data-id="{{this._id}}" class="edit"><img class="icon" src="/assets/edit-icon.png" alt=""></td>
+            <td data-id="{{this._id}}"  class="delete"><a href="/timeline/{{this._id}}/delete"><img class="icon" src="/assets/delete-icon.png" alt=""></a></td>
+            <td data-id="{{this._id}}" class="edit"><a href="/timeline/{{this._id}}/edit"><img class="icon" src="/assets/edit-icon.png" alt=""></a></td>
         </tr>
         {{/each}}
     </tbody>
