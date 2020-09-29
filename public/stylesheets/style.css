@@ -4,6 +4,7 @@
 @import './signin-signup.css';
 @import './demo.css';
 @import './details.css';
+@import './dashboard.css';
 
 @font-face {
     font-family: boogaloo;
