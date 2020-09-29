@@ -8,7 +8,7 @@ router.get("/details/:id", (req, res, next)=>{
     .then((idDetails) =>{
         res.render("detailsEvent", {idDetails});
     })
-    .catch((erro)=>{
+    .catch((error)=>{
         next(error)
     });
 });
