@@ -9,12 +9,12 @@
   align-items: center;
 }
 
-
 /* .hidden{
     display: none;
 } */
 
-.timeline-form, .event-form, .user_form {
+.timeline-form,
+.event-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,6 +26,7 @@
 .form-title {
   margin-bottom: 20px;
   font-family: "sue";
+  font-size: 50px;
 }
 
 .input {
@@ -33,16 +34,6 @@
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
-}
-
-.btn {
-  font-size: 30px;
-  width: 200px;
-  height: 60px;
-  background: #ffd1b3;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 19px;
-  margin-top: 50px;
 }
 
 .form-item-rating {

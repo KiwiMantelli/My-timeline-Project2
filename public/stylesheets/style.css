@@ -1,7 +1,8 @@
 
 @import './home.css';
 @import './time_event_form.css';
-@import './user_form.css';
+@import './signin-signup.css';
+@import './demo.css';
 
 @font-face {
     font-family: boogaloo;
@@ -24,3 +25,20 @@
     padding: 0;
     
 }
+
+h1{
+    font-family: "sue";
+    font-size: 40px;
+}
+
+.btn {
+    font-family: "sue";
+    font-size: 30px;
+    width: 200px;
+    height: 70px;
+    background: #ffd1b3;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+    margin-top: 30px;
+
+  }
