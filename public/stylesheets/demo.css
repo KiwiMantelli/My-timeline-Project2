@@ -40,9 +40,14 @@
     margin-left: 150vh;
 }
 
+#lets {
+    text-decoration: none;
+    color: black;
+}
+
 #demo-line {
     position: absolute;
-    width: 0.5vh;
+    width: 0.3vh;
     height: 45vh;
     margin-left: 55vh;
     margin-top: 23vh;
@@ -77,4 +82,25 @@
     top: 74vh;
 }
 
+.demo-num {
+    font-family: boogaloo;
+    font-size: 4vh;
+    position: absolute;
+    left: 50vh;
+}
 
+#num1 {
+    top: 28vh;
+}
+
+#num2 {
+    top: 43vh;
+}
+
+#num3 {
+    top: 58vh;
+}
+
+#num4 {
+    top: 73vh;
+}
