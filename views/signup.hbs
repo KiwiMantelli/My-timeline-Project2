@@ -3,8 +3,8 @@
 
   <form method="post" action="/signup" class="user_form">
     <h1 class="form-title">Create your account</h1>
-   
 
+    {{>flashMessage}}
     <div class="form-item-wrapper">
       <label for="firstname" class="label">Name</label>
       <input id="firstname" type="text" name="name" class="input-text input" placeholder="Albert" required>

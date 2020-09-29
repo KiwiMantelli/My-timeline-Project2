@@ -32,7 +32,7 @@ app.use(cookieParser());
       secret: process.env.SESSION_SECRET,
       resave: false,
       saveUninitialized: true,
-      cookie: {},
+      cookie: {maxAge: 3000000},
     })
   ); // Creates a session object, gives a cookie to client that the client sends back on every request
 
@@ -42,5 +42,9 @@ app.use(flash());
 app.use("/", require("./routes/index"));
 app.use("/", require("./routes/auth"));
 app.use("/timeline", require("./routes/timeline"));
+
+//MIDDLEWARES
+app.use(require("./middlewares/exposeFLashMessage"));
+app.use(require("./middlewares/exposeLoginStatus"));
 
 module.exports = app;

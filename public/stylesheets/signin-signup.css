@@ -49,3 +49,17 @@
   font-family: Boogaloo;
   font-size: 20px;
 }
+
+.flash-msg{
+  font-family: Boogaloo;
+  font-size: 20px;
+
+}
+
+.success{
+  color: green;
+}
+
+.error{
+  color: red;
+}
