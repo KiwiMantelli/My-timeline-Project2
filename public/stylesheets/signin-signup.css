@@ -7,17 +7,14 @@
 }
 
 .user_form {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 60%;
   height: 70vh;
-  margin-bottom: 40px;
-}
-
-.form-subtitle {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .form-item-wrapper {
@@ -28,26 +25,36 @@
   width: 100%;
 }
 
-.btn-signup {
-  font-family: "sue";
-  font-size: 30px;
-  width: 200px;
-  height: 70px;
-  background: #ffd1b3;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 19px;
-  margin-top: 20px;
- 
+#password {
+  margin-bottom: 40px;
 }
 
-.label {
-  font-family: Boogaloo;
-  font-size: 20px;
+::placeholder {
+  font-family: boogaloo;
+  font-size: 3.5vh;
 }
+
+.input {
+width: 70vh;
+height: 10vh;
+background: #FFFEFE;
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+border: 0vh solid #FFFEFE;
+border-radius: 20px;
+}
+
+.btn-signin {
+  position: relative;
+  margin-bottom: 0px;
+  margin-left: 300px;
+  margin-top: 30px;
+}
+
 
 .form-sub-infos{
   font-family: Boogaloo;
   font-size: 20px;
+  margin-top: 45px;
 }
 
 .flash-msg{
@@ -62,4 +69,100 @@
 
 .error{
   color: red;
+}
+
+.form-line {
+  position: absolute;
+  width: 60vh;
+  height: 0.3vh;
+  left: 37.5vh;
+  margin-top: 55vh;
+  background-color: #D09D7C;
+  border: 0vh solid #D09D7C;
+}
+.form-ball {
+  position: absolute;
+  width: 2.5vh;
+  height: 2.5vh;
+  border-radius: 100%;
+  left: 37.5vh;
+  margin-top: 55vh;
+  background-color: #D09D7C;
+  border: 0vh solid #D09D7C;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-big-blue-ball {
+    position: absolute;
+    margin-bottom: 50vh;
+    margin-left: 95vh;
+    width: 25vh;
+    height: 25vh;
+    background-color: #9DB7B8;
+    border-radius: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-big-pink-ball {
+  position: absolute;
+  margin-bottom: 62vh;
+  margin-left: 115vh;
+  width: 15vh;
+  height: 15vh;
+  background-color:#FFD1B3;
+  border-radius: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-margin {
+  margin-bottom: 20px;
+}
+
+#create-title {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.su-form-line {
+  position: absolute;
+  width: 60vh;
+  height: 0.3vh;
+  left: 36.5vh;
+  margin-top: 61vh;
+  background-color: #D09D7C;
+  border: 0vh solid #D09D7C;
+}
+
+.su-form-ball {
+  position: absolute;
+  width: 2.5vh;
+  height: 2.5vh;
+  border-radius: 100%;
+  left: 36.5vh;
+  margin-top: 61vh;
+  background-color: #D09D7C;
+  border: 0vh solid #D09D7C;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.su-form-blue-ball {
+  position: absolute;
+    margin-bottom: 50vh;
+    margin-left: 110vh;
+    width: 25vh;
+    height: 25vh;
+    background-color: #9DB7B8;
+    border-radius: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.su-form-pink-ball {
+  position: absolute;
+  margin-bottom: 62vh;
+  margin-left: 130vh;
+  width: 15vh;
+  height: 15vh;
+  background-color:#FFD1B3;
+  border-radius: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
