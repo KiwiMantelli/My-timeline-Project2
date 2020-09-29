@@ -3,8 +3,6 @@ const router = new express.Router();
 const Event = require("../models/Event");
 const uploader = require("../config/cloudinary");
 
-
-
 router.get("/create", (req, res) => {
 
 const cat= req.query.category;
@@ -17,6 +15,7 @@ if(cat === "family") data.isFamily = true;
 
 router.post("/create", uploader.single("image"), async (req, res, next) => {
   const newEvents = req.body;
+  newEvents.user_id = req.session.currentUser._id;
   if (req.file) {
     newEvents.image = req.file.path;
   }
@@ -33,7 +32,7 @@ router.get("/:id/edit", async (req, res, next) => {
     const eventId = req.params.id;
     console.log(eventId)
     const event = await Event.findById(eventId);
-    res.render("edit-event", { event: event }); 
+    res.render("edit-event", { title: "Edit Event", event: event }); 
   } catch (error) {
     next(error);
   }
@@ -60,12 +59,13 @@ router.get("/:id/delete", async (req, res, next) => {
 });
 
 router.get("/details/:id", (req, res, next)=>{
-    Event.findById(req.params.id)
+  res.render("detailsEvent", {title: "Event Details"});
+   /* Event.findById(req.params.id)
     .then((idDetails) =>{
         res.render("detailsEvent", {idDetails});
     })
     .catch((error)=>{
         next(error)
-    });
+    });*/
 });
 module.exports = router;

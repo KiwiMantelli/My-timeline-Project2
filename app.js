@@ -38,6 +38,19 @@ app.use(
 
 app.use(flash());
 
+app.use(function (req, res, next) {
+  if (req.session.currentUser) {
+    res.locals.isLoggedIn = true;
+    res.locals.isAdmin = req.session.currentUser.role === "admin";
+    res.locals.username = req.session.currentUser.username;
+  } else {
+    res.locals.isLoggedIn = false;
+    res.locals.username = null;
+    res.locals.isAdmin = false;
+  }
+  next();
+});
+
 // routers
 app.use("/", require("./routes/index"));
 app.use("/", require("./routes/auth"));

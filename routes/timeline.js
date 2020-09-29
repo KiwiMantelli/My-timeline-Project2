@@ -8,12 +8,16 @@ router.get("/create", (req, res, next) => {
 
 router.post("/create", async (req, res, next) => {
   try {
-    const newTimeline = await Timeline.create(req.body);
+    const newTimeline = req.body;
+    newTimeline.user_id = req.session.currentUser._id;
+    console.log(newTimeline);
+    await Timeline.create(newTimeline);
     res.redirect("/timeline/event/create");
   } catch (error) {
     next(error);
   }
 });
+
 
 router.get("/:id/edit", async (req, res, next) => {
   try {
@@ -57,11 +61,20 @@ router.post("/:id/edit", async (req, res, next) => {
   //res.render("vue", data)
 })*/
 
-router.get("/:id/display", (req, res, next) => {
-  res.render("timelineDisplay", {
-    title: "My Timeline",
-    css: ["timeline-styles"],
-  });
+router.get("/:id/display", async(req, res, next) => {
+    timelineId = req.params.id;
+try{
+    const getTimeline = await Timeline.findById(timelineId);
+    console.log(getTimeline);
+    res.render("timelineDisplay", {
+      title: "My Timeline",
+      css: ["timeline-styles"],
+      timeline: getTimeline,
+    });
+}
+catch (error) {
+    next(error);
+}
 });
 
 router.get("/:id/delete", async (req, res, next) => {
