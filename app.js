@@ -44,7 +44,7 @@ app.use("/", require("./routes/auth"));
 app.use("/timeline", require("./routes/timeline"));
 
 //MIDDLEWARES
-app.use(require("./middlewares/exposeFLashMessage"));
+app.use(require("./middlewares/exposeFlashMessage"));
 app.use(require("./middlewares/exposeLoginStatus"));
 
 module.exports = app;
