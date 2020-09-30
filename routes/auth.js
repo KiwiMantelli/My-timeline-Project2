@@ -10,8 +10,6 @@ router.get("/signin", (req, res, next) => {
 });
 
 router.post("/signin", async (req, res, next) => {
- 
-
   const { email, password } = req.body;
   const foundUser = await User.findOne({ email: email });
   console.log(foundUser);
@@ -28,22 +26,22 @@ router.post("/signin", async (req, res, next) => {
       const userDocument = { ...foundUser };
       const userObject = foundUser.toObject();
       delete userObject.password; 
-      console.log(req.session, "before defining current user");
+      //console.log(req.session, "before defining current user");
       req.session.currentUser = userObject; 
-      const isLoggedIn = true;
-
-      res.render("dashboard", { isLoggedIn });
+      console.log(req.session);
+      req.flash("success", "Successfully logged in...");
+      res.redirect("/dashboard");
     }
   }
 });
 
 router.get("/signup", (req, res, next) => {
   res.render("signup", { title: "Sign up" });
-  
 });
 
-router.post("/signup", async (req, res, next) => {
-  
+
+//Sign Up
+router.post("/signup", async (req, res, next) => { 
   try {
     const newUser = req.body;
     console.log(newUser);
@@ -53,7 +51,7 @@ router.post("/signup", async (req, res, next) => {
     if (foundUser) {
       console.log("email taken")
       req.flash("error", "This email is taken");
-      res.redirect("/signup");
+      res.render("signup", {error: "Email alreay taken"});
     } else {
       const hashedPassword = bcrypt.hashSync(newUser.password, salt);
       newUser.password = hashedPassword;
@@ -64,12 +62,12 @@ router.post("/signup", async (req, res, next) => {
   } catch (error) {
     next(error);
   }
- 
 });
 
+
+//Logout
 router.get("/logout", async (req, res, next) => {
-  res.send("Log out route");
-  console.log(req.session.currentUser);
+  //console.log(req.session.currentUser);
   req.session.destroy(function (err) {
     res.redirect("/signin");
   });

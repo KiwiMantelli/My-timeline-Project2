@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/KiwiMantelli/my-timeline-project2#readme",
   "dependencies": {
+    "axios": "^0.20.0",
     "bcrypt": "^5.0.0",
     "cloudinary": "^1.23.0",
     "connect-flash": "^0.1.1",

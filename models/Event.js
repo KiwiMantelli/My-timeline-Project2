@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
     
     const eventSchema = new Schema({
+        user_id: String,
+        timeline_id: String,
         title: {type:String, required: true},
         date: {type:Date,required: true},
         description:{type: String,required: true},

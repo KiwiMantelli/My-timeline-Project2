@@ -7,13 +7,17 @@ router.get("/", (req, res, next) => {
 });
 
 router.get("/dashboard", async(req, res, next) => {
-  try{
-    const allTimelines = await Timeline.find({});
-    console.log(allTimelines);
-    res.render("dashboard", {timelines : allTimelines });
-  }
-  catch(error) {
-    next(error);
+  if(req.session.currentUser) {
+    try{
+      const currentUser = req.session.currentUser._id;
+      const usersTimelines = await Timeline.find({"user_id": currentUser});
+      res.render("dashboard", {title: "Dashboard", timelines : usersTimelines });
+    }
+    catch(error) {
+      next(error);
+    }
+  } else {
+    res.redirect("/signin");
   }
   });
 
