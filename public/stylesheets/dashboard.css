@@ -1,0 +1,83 @@
+#my-timelines {
+    position: relative;
+    font-size: 10vh;
+    margin-left: 5vh;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+
+#dashboard-line {
+    position: absolute;
+    width: 125vh;
+    height: 0.5vh;
+    left: 0px;
+    top: 23vh;
+    background-color: #D09D7C;
+    border: 0vh solid #D09D7C;
+}
+
+#dashboard-ball {
+    position: absolute;
+    width: 2.5vh;
+    height: 2.5vh;
+    border-radius: 100%;
+    left: 124vh;
+    top: 22vh;
+    background-color: #D09D7C;
+    border: 0vh solid #D09D7C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#display-dashboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table {
+    background-color: white;
+    padding: 8vh;
+    border-radius: 25px;
+    margin: 10vh;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.category {
+    font-family: sue;
+    font-size: 4vh;
+    color: #9DB7B8;
+}
+
+.table tbody tr >td {
+    text-align: left;
+    padding-left: 5vh;
+}
+
+.tl-dash-title {
+    font-family: boogaloo;
+    font-size: 5vh;
+    color: #C95455;
+}
+
+.icon {
+    height: 4vh;
+}
+#eye {
+    padding-left: 30vh;
+}
+
+#display-right {
+    display:flex;
+    flex-direction: column;
+    margin: 0px;
+    align-items: center;
+}
+
+#dash-img {
+    height: 55vh;
+    margin-right: 10vh;
+    margin-bottom: 5vh;
+    border-radius: 10%;
+}
+
+#create-timeline {
+    margin-right: 10vh;
+}

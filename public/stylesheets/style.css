@@ -4,6 +4,7 @@
 @import './signin-signup.css';
 @import './demo.css';
 @import './details.css';
+@import './dashboard.css';
 
 @font-face {
     font-family: boogaloo;
@@ -41,12 +42,7 @@ h1{
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border: 0vh solid #D09D7C;
     border-radius: 19px;
-    margin-top: 30px;
 
-  }
-
-.icon {
-      height: 50px;
   }
 
   .img-event{

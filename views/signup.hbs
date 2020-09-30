@@ -2,29 +2,27 @@
 
 
   <form method="post" action="/signup" class="user_form">
-    <h1 class="form-title">Create your account</h1>
+    <h1 id="create-title" class="form-title">Create your account</h1>
 
     {{>flashMessage}}
     <div class="form-item-wrapper">
-      <label for="firstname" class="label">Name</label>
-      <input id="firstname" type="text" name="name" class="input-text input" placeholder="Albert" required>
+      <input id="firstname" type="text" name="name" class="input-text input" placeholder="Name" required>
     </div>
     <div class="form-item-wrapper">
-      <label for="lastname" class="label">Last Name</label>
-      <input id="lastname" type="text" name="lastname" class="input-text input" placeholder="Biceps" required>
+      <input id="lastname" type="text" name="lastname" class="input-text input" placeholder="Last name" required>
     </div>
     <div class="form-item-wrapper">
-      <label for="email" class="label">Email</label>
-      <input id="email" type="email" name="email" class="input-text input" placeholder="albert.biceps@gmail.com"
+      <input id="email" type="email" name="email" class="input-text input" placeholder="Email"
         required>
     </div>
     <div class="form-item-wrapper">
-      <label for="password" class="label-ref label">Password</label>
-      <input id="password" type="password" name="password" class="input-text input" placeholder="••••••" required
-        value="1234">
+      <input id="password" type="password" name="password" class="input-text input" placeholder="Password" required>
     </div>
-    <button class="btn-signup">sign up</button>
+    <button class="btn" class="btn-signup">Sign up</button>
   </form>
   <p class="form-sub-infos">Already have an account ? <a href="/signin" class="button-link-form">Sign In</a></p>
-
+<hr class="su-form-line"">
+<div class="su-form-ball"></div>
+<div class="su-form-blue-ball"></div>
+<div class="su-form-pink-ball"></div>
 </section>
