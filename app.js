@@ -12,6 +12,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const dev_mode = false;
 const logger = require("morgan");
+const axios = require('axios');
 
 // config logger (pour debug)
 app.use(logger("dev"));
