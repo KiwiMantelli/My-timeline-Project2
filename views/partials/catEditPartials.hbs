@@ -4,7 +4,7 @@
 <input id="event-date" type="date" class="input-text input" name="date" required placeholder="DD/MM/YY"
   value="{{event.date}}">
 
-<input id="event-descr" type="text" class="input-text input" name="description" required placeholder="ex: amazing trip"
-  value="{{event.description}}">
+<textarea id="event-descr" rows="4" cols="50" maxlength="1000" class="input-text input" name="description" required placeholder="ex: amazing trip"
+  value="{{event.description}}"></textarea>
 
 <input id="event-image" type="file" class="event-image input" name="image" value="{{event.image}}">
