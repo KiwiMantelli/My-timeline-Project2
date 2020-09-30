@@ -1,7 +1,9 @@
+
 .nav {
     display: flex;
     position: relative;
     height: 7vh;
+    width: 100%;
     background: #FFFEFE;
     justify-content: space-between;
     align-items: center;
@@ -20,5 +22,12 @@
     text-decoration: none;
     color: #333333;
     margin-right: 5vh;
+}
+
+
+@media all {
+    .nav {
+        width: 100;
+    }
 }
 

@@ -1,9 +1,12 @@
 @import './navbar.css';
+
+
 body {
     background-image: linear-gradient(to bottom, #EDEADB 70%, white 30%);
     background-attachment:fixed;
     background-repeat: no-repeat;
 }
+
 #my-life {
     position: absolute;
     font-family: molle;
@@ -11,6 +14,7 @@ body {
     margin: 5vh auto 0vh 10vh;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 #line {
     position: relative;
     width: 125vh;
@@ -20,6 +24,7 @@ body {
     background-color: #D09D7C;
     border: 0vh solid #D09D7C;
 }
+
 #ball {
     position: absolute;
     width: 2.5vh;
@@ -31,6 +36,7 @@ body {
     border: 0vh solid #D09D7C;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 #timeline {
     position: relative;
     font-family: sue;
@@ -39,12 +45,14 @@ body {
     height: 12vh;
     text-shadow: 6px 6px 7px #CFCBCB;
 }
+
 #slogan {
     position: relative;
     font-family: sue;
     font-size: 5vh;
     margin: auto auto 0vh 60vh;
 }
+
 .display {
     height: 40vh;
     display: flex;
@@ -53,12 +61,14 @@ body {
     margin-top: 0%;
     margin-bottom: 0%;
 }
+
 #home-skyline {
     position: static;
     height: 55vh;
     margin-left: 20vh;
     border-radius: 10%;
 }
+
 #wanna-see-ball {
     position: static;
     margin: 30vh 40vh 13vh 15vh;
@@ -68,6 +78,7 @@ body {
     border-radius: 100%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 #wanna-see-text {
     position: absolute;
     margin: 38vh auto 0vh 5vh;
@@ -76,6 +87,7 @@ body {
     font-family: boogaloo;
     font-size: 6vh;
 }
+
 #check {
     position: absolute;
     margin: 43vh 15vh auto 20vh;
