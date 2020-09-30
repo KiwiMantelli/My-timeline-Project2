@@ -21,8 +21,8 @@ router.post("/create", async (req, res, next) => {
 
     const createdTimeline = await Timeline.create(newTimeline);
     data.timeline = createdTimeline;
-    const timelineId = createdTimeline._id;
-    console.log("it's data timeline", data.timeline.id)
+     data.timelineId = createdTimeline._id;
+    
     res.render("create-event", data);
   } catch (error) {
     next(error);
