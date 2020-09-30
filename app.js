@@ -56,7 +56,7 @@ app.use(function (req, res, next) {
 app.use("/", require("./routes/index"));
 app.use("/", require("./routes/auth"));
 app.use("/timeline", require("./routes/timeline"));
-app.use("/timeline/event", require("./routes/event"))
+app.use("/timeline", require("./routes/event"))
 
 app.use((req, res, next) => {
   res.render("NotFound", { message: "The route does not exist" });

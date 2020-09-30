@@ -11,8 +11,8 @@ router.post("/create", async (req, res, next) => {
     const newTimeline = req.body;
     newTimeline.user_id = req.session.currentUser._id;
     console.log(newTimeline);
-    await Timeline.create(newTimeline);
-    res.redirect("/timeline/event/create");
+    const createdTimeline = await Timeline.create(newTimeline);
+    res.redirect(`/timeline/${createdTimeline._id}/event/create`);
   } catch (error) {
     next(error);
   }
