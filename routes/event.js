@@ -9,10 +9,11 @@ router.get("/create", (req, res) => {
 
 const cat= req.query.category;
 const data={};
-if(cat ==="trips") data.isTrips = true;
-if(cat === "books/movies/series") data.isBooks = true;
-if(cat === "family") data.isFamily = true;
-  res.render("create-event", { title: "Create New Event", data });
+if(cat ==="trips") {data.isTrips = true};
+if(cat === "books/movies/series") {data.isBooks = true};
+if(cat === "family") {data.isFamily = true};
+res.render("create-event", { title: "Create New Event", data });
+  
 });
 
 router.post("/create", uploader.single("image"), async (req, res, next) => {
