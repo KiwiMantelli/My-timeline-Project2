@@ -81,7 +81,7 @@ catch (error) {
 
 router.get("/:id/delete", async (req, res, next) => {
   try {
-    const deleteTimeline = await Timeline.findByIdAndRemove(req.params._id);
+    const deleteTimeline = await Timeline.findByIdAndRemove(req.params.id);
     res.redirect("/dashboard");
   } catch (error) {
     next(error);
