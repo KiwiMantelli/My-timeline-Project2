@@ -39,10 +39,14 @@ router.get("/event/:id/edit", async (req, res, next) => {
   }
 });
 
-router.post("/event/:id/edit", async (req, res, next) => {
+router.post("/event/:id/edit", uploader.single("image"), async (req, res, next) => {
+  const editEvent = req.body;
+  if (req.file) {
+    editEvent.image = req.file.path;
+  }
   try {
     const eventId = req.params.id;
-    const event = await Event.findByIdAndUpdate(eventId, req.body);
+    const event = await Event.findByIdAndUpdate(eventId, editEvent);
     res.redirect(`/timeline/event/details/${eventId}`);
   } catch (error) {
     next(error);

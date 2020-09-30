@@ -53,6 +53,10 @@ app.use(function (req, res, next) {
   next();
 });
 
+//MIDDLEWARES
+app.use(require("./middlewares/exposeFlashMessage"));
+app.use(require("./middlewares/exposeLoginStatus"));
+
 // routers
 app.use("/", require("./routes/index"));
 app.use("/", require("./routes/auth"));
@@ -68,8 +72,5 @@ app.use((err, req, res, next) => {
   res.render("error", { err });
 });
 
-//MIDDLEWARES
-app.use(require("./middlewares/exposeFlashMessage"));
-app.use(require("./middlewares/exposeLoginStatus"));
 
 module.exports = app;
