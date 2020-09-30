@@ -2,32 +2,32 @@
 .nav {
     display: flex;
     position: relative;
-    height: 7vh;
+    height: 2vw;
     width: 100%;
     background: #FFFEFE;
     justify-content: space-between;
     align-items: center;
     font-family: boogaloo;
-    font-size: 4vh;
-    padding: 8px 10px;
+    font-size: 1.8vw;
+    padding: 1.6vw;
 }
 
 #nav-link-home {
     text-decoration: none;
     color: #333333;
-    margin-left: 5vh;
+    margin-left: 1vw;
 }
 
 .nav-link {
     text-decoration: none;
     color: #333333;
-    margin-right: 5vh;
+    margin-right: 1vw;
 }
 
 
 @media all {
     .nav {
-        width: 100;
+        width: 100%;
     }
 }
 
