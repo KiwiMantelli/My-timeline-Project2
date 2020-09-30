@@ -5,14 +5,8 @@ const uploader = require("../config/cloudinary");
 
 router.get("/:timelineId/event/create", (req, res, next) => {
   const timelineId = req.params.timelineId;
-  const cat = req.params.category;
-  const data = {};
-  console.log(data);
-  console.log(cat);
-  if (cat === "trips") data.isTrips = true;
-  if (cat === "culture") data.isBooks = true;
-  if (cat === "family") data.isFamily = true;
-  res.render("create-event", { title: "Create New Event", data, timelineId });
+
+  res.render("create-event", { title: "Create New Event", timelineId });
 });
 
 router.post(

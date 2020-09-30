@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Timeline = require("../models/Timeline");
 const Event = require("../models/Event");
-const axios = require('axios');
+const axios = require("axios");
 
 router.get("/create", (req, res, next) => {
   res.render("timeline-create", { title: "Create New Timeline" });
@@ -10,16 +10,24 @@ router.get("/create", (req, res, next) => {
 
 router.post("/create", async (req, res, next) => {
   try {
+    const category = req.body.category;
+    const data = {};
+    if (category === "trips") data.isTrips = true;
+    if (category === "culture") data.isCulture = true;
+    if (category === "family") data.isFamily = true;
+
     const newTimeline = req.body;
     newTimeline.user_id = req.session.currentUser._id;
-    console.log(newTimeline);
+
     const createdTimeline = await Timeline.create(newTimeline);
-    res.redirect(`/timeline/${createdTimeline._id}/event/create`);
+    data.timeline = createdTimeline;
+    const timelineId = createdTimeline._id;
+    console.log("it's data timeline", data.timeline.id)
+    res.render("create-event", data);
   } catch (error) {
     next(error);
   }
 });
-
 
 router.get("/:id/edit", async (req, res, next) => {
   try {
@@ -63,9 +71,9 @@ router.post("/:id/edit", async (req, res, next) => {
   //res.render("vue", data)
 })*/
 
-router.get("/:id/display", async(req, res, next) => {
-    timelineId = req.params.id;
-try{
+router.get("/:id/display", async (req, res, next) => {
+  timelineId = req.params.id;
+  try {
     const getTimeline = await Timeline.findById(timelineId);
     console.log(getTimeline);
     res.render("timelineDisplay", {
@@ -73,10 +81,9 @@ try{
       css: ["timeline-styles"],
       timeline: getTimeline,
     });
-}
-catch (error) {
+  } catch (error) {
     next(error);
-}
+  }
 });
 
 router.get("/:id/delete", async (req, res, next) => {
@@ -88,7 +95,7 @@ router.get("/:id/delete", async (req, res, next) => {
   }
 });
 
-router.get("/getEvents/:id", async(req, res, next) => {
+router.get("/getEvents/:id", async (req, res, next) => {
   //const timelineId = req.params.id;
   const test = await Event.find({ timeline_id: timelineId });
   res.json(test);
