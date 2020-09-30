@@ -1,5 +1,6 @@
 require("dotenv").config();
 require("./config/mongodb");
+require ("./helpers/helpers");
 
 // base dependencies
 const express = require("express");

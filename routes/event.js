@@ -60,7 +60,7 @@ router.get("/event/:id/delete", async (req, res, next) => {
 });
 
 router.get("/event/details/:id", (req, res, next) => {
-  res.render("detailsEvent", { title: "Event Details" });
+ 
   Event.findById(req.params.id)
     .then((idDetails) => {
       res.render("detailsEvent", { idDetails });
