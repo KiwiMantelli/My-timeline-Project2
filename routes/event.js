@@ -7,8 +7,6 @@ router.get("/:timelineId/event/create", (req, res, next) => {
 const timelineId = req.params.timelineId;
 const cat= req.query.category;
 const data={};
-console.log("create form")
-console.log(timelineId);
 if(cat ==="trips") data.isTrips = true;
 if(cat === "books/movies/series") data.isBooks = true;
 if(cat === "family") data.isFamily = true;
