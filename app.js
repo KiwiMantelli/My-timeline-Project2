@@ -12,6 +12,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const dev_mode = false;
 const logger = require("morgan");
+const axios = require('axios');
 
 // config logger (pour debug)
 app.use(logger("dev"));
@@ -38,11 +39,24 @@ app.use(
 
 app.use(flash());
 
+app.use(function (req, res, next) {
+  if (req.session.currentUser) {
+    res.locals.isLoggedIn = true;
+    res.locals.isAdmin = req.session.currentUser.role === "admin";
+    res.locals.username = req.session.currentUser.username;
+  } else {
+    res.locals.isLoggedIn = false;
+    res.locals.username = null;
+    res.locals.isAdmin = false;
+  }
+  next();
+});
+
 // routers
 app.use("/", require("./routes/index"));
 app.use("/", require("./routes/auth"));
 app.use("/timeline", require("./routes/timeline"));
-app.use("/timeline/event", require("./routes/event"))
+app.use("/timeline", require("./routes/event"))
 
 app.use((req, res, next) => {
   res.render("NotFound", { message: "The route does not exist" });

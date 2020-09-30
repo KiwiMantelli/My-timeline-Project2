@@ -1,1 +1,1 @@
-console.log("connected");
+console.log("script.js connected");
