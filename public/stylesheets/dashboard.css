@@ -81,3 +81,9 @@
 #create-timeline {
     margin-right: 10vh;
 }
+
+@media (max-width : 992px) {
+    .table {
+        background-color: purple;
+    }
+}

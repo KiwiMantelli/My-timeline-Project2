@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const Timeline = require("../models/Timeline");
+const Event = require("../models/Event");
+const axios = require('axios');
 
 router.get("/create", (req, res, next) => {
   res.render("timeline-create", { title: "Create New Timeline" });
@@ -79,11 +81,20 @@ catch (error) {
 
 router.get("/:id/delete", async (req, res, next) => {
   try {
-    const deleteTimeline = await Timeline.deleteOne(req.params._id);
+    const deleteTimeline = await Timeline.findByIdAndRemove(req.params._id);
     res.redirect("/dashboard");
   } catch (error) {
     next(error);
   }
+});
+
+router.get("/getEvents/:id", async(req, res, next) => {
+  //const timelineId = req.params.id;
+  const test = await Event.find({ timeline_id: timelineId });
+  res.json(test);
+  console.log("timeline id");
+  console.log(timelineId);
+  console.log(req.params.id);
 });
 
 module.exports = router;
