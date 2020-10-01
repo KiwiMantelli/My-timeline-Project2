@@ -1,14 +1,23 @@
-<div class="big-container">
+<div class="big-container-timeline">
   <form method="post" action="/timeline/{{timeline._id}}/edit" class="timeline-form">
     <h3 class="form-title"> Edit Timeline</h3>
 
-    <input id="timeline-name" type="text" class="input" name="name" required placeholder="title"
-      value="{{timeline.name}}">
+    <div class="formfield-select">
 
+      <input id="timeline-name" type="text" class="input" name="name" required placeholder="title"
+        value="{{timeline.name}}">
 
-    <input id="timeline-cat" type="text" class="input" name="category" required placeholder="category"
-      value="{{timeline.category}}">
-
+      <div class="formfield-select--container">
+      
+        <select id="mon_select" id="category" name="category" class="select" required>
+          <option value="-1" disabled selected>choose a category</option>
+          <option value="general">General</option>
+          <option value="trips">Trips</option>
+          <option value="culture">Culture</option>
+          <option value="family">Family</option>
+        </select>
+      </div>
+    </div>
 
     <button class="btn">Edit!</button>
   </form>

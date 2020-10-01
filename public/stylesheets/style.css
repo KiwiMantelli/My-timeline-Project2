@@ -25,7 +25,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
+
+body {
+    background-image: linear-gradient(to bottom, #edeadb 70%, white 30%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+  }
 
 h1{
     font-family: "sue";
@@ -35,8 +44,6 @@ h1{
 .btn {
     font-family: "sue";
     font-size: 30px;
-    width: 200px;
-    height: 70px;
     background: #ffd1b3;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border: 0vh solid #D09D7C;
@@ -52,6 +59,17 @@ h1{
       opacity: 75%;
 
   }
+
+  .input {
+    width: 70vh;
+    height: 10vh;
+    background: #FFFEFE;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 0vh solid #FFFEFE;
+    border-radius: 20px;
+    padding: 0 30px;
+    margin: 10px;
+    }
 
 
   .img-event{

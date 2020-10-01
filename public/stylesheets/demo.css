@@ -7,10 +7,16 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#all-demo {
+
+.demo{
     display: flex;
-    justify-content: space-between;
-    position: absolute;
+    flex-direction: row;
+    flex: 2;
+    background-image: url('/assets/skyline.jpg');
+    background-size: 35vw;
+    background-repeat: no-repeat;
+    background-position: right;
+
 }
 
 #demo-description {
@@ -29,27 +35,19 @@
     margin-bottom: 5.5vh;
 }
 
-#demo-home-skyline {
-    margin-top: 5vh;
-    height: 50vh;
-}
-
-#lets-try {
-    position: relative;
-    margin-top: 57vh;
-    margin-left: 150vh;
-}
 
 #lets {
     text-decoration: none;
     color: black;
+    padding: 10px 20px;
 }
 
+
 #demo-line {
-    position: absolute;
+    /* position: absolute; */
     width: 0.3vh;
     height: 45vh;
-    margin-left: 55vh;
+    margin-left: 0vh;
     margin-top: 23vh;
     background-color: #D09D7C;
     border: 0vh solid #D09D7C;
