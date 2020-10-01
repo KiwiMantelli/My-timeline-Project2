@@ -1,22 +1,22 @@
-<div class="event-detail">
-    <h1 class="title-view">Event view</h1>
-    <div class="details">
-    <h2>{{idDetails.title}}</h2>
-    <p>{{formatDate idDetails.date}}</p>
-    <p>{{idDetails.description}}</p>
-    <img src="{{idDetails.image}}" class="img-event" alt="image event">
-    <span>{{idDetails.rating}}</span>
-    <p>{{idDetails.review}}</p>
-    <p>{{idDetails.author}}</p>
-    <p>{{idDetails.map}}</p>
-    <p>{{idDetails.people}}</p>
-    </div>
-    <div>
+
+    <h1 class="title-view">{{idDetails.title}}</h1>
+    <p id="date-event">{{formatDate idDetails.date}}</p>
+    <div class="details-img">
+        <img src="{{idDetails.image}}" class="img-event" alt="image event">
+        <div class="details">
+            <span>{{idDetails.rating}}</span>
+            <p>{{idDetails.description}}</p>
+            <p>{{idDetails.review}}</p>
+            <p>{{idDetails.author}}</p>
+            <p>{{idDetails.map}}</p>
+            <p>With {{idDetails.people}}</p>
+    <div id="details-buttons">
         <a href="/timeline/event/{{idDetails._id}}/edit"><img src="/assets/edit-icon.png" class="icon"
                 alt="edit icon" /></a>
         <a href="/timeline/event/{{idDetails._id}}/delete"><img src="/assets/delete-icon.png" class="icon"
                 alt="delete icon" /></a>
+                <button id="details-btn" class="btn"><a href="/timeline/{{idDetails.timeline_id}}/display">Go back</a></button>
+    </div>
     </div>
 
-<button class="btn"><a href="/timeline/{{idDetails.timeline_id}}/display">Go back</a></button>
-</div>
+    

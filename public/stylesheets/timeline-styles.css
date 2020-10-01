@@ -1,3 +1,12 @@
+#whole-timeline {
+    background-image: url("/assets/skyline.jpg");
+  background-size: 50vw;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 80vh;
+background-attachment: fixed;
+}
+
 #timeline-section {
     width: 500px;
     z-index: 1;
@@ -10,7 +19,7 @@
 }
 
 h1.title {
-    margin-top: 3vw;
+    padding-top: 3vw;
     text-align: center;
     font-family: boogaloo;
     letter-spacing: 0.25rem;
