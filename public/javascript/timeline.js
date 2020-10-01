@@ -10,9 +10,19 @@ window.addEventListener('load', () => {
         axios.get(`/timeline/getEvents/timelineId`)
         .then(res => {
             const data = res.data;
+            console.log(data);
+            data.forEach(event => {
+        event.year = Number(event.date.slice(0,4));
+        event.month = Number(event.date.slice(5,7));
+        event.day = Number(event.date.slice(8,10));  
+            })
+        data.sort((a,b) => {
+               return (a.year - b.year || a.month - b.month || a.day - b.day)
+            })
             displayEvents(data);
-            console.log(data)})
-            .catch(error=> console.log(error));
+            console.log(data)
+        })
+        .catch(error=> console.log(error));
     }
     getEvents();
 
@@ -27,7 +37,6 @@ function displayEvents(events) {
         const month = months[Number(events[i].date.slice(5,7))];
         const day = events[i].date.slice(8,10);
         if(i%2 === 0) {
-            console.log(events);
             timeline.innerHTML +=`        
             <div class="container">
                 <div class="timeline"></div>
