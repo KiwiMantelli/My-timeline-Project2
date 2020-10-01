@@ -10,10 +10,11 @@
 }
 
 h1.title {
+    margin-top: 3vw;
     text-align: center;
-    font-family: boogaloo, sans-serif;
+    font-family: boogaloo;
     letter-spacing: 0.25rem;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .timeline {
@@ -60,8 +61,8 @@ h1.title {
     left: 80px;
 }
 .card-title {
-    font-family: sue, sans-serif;
-    font-size: 1.6rem;
+    font-family: boogaloo;
+    font-size: 2rem;
 }
 .card {
     border-radius: 1rem;
@@ -69,10 +70,9 @@ h1.title {
     width: 480px;
     position: absolute;
     top: -80px;
-    padding-left: 30px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
@@ -94,11 +94,11 @@ h1.title {
 }
 
 .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 80%;
-    padding: 10px;
-    height: 100%;
-    width: 100%;
     border-radius: 1rem;
 }
 
@@ -133,8 +133,9 @@ h1.title {
 
 .btn-add-event {
     margin-left: 50px;
-    padding: 20px;
+    padding: 10px 20px;
     text-decoration: none;
+    color: black;
 }
 
 .btn-add-event:hover {
