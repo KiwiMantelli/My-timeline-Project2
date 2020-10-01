@@ -2,11 +2,25 @@ const express = require("express");
 const router = new express.Router();
 const Event = require("../models/Event");
 const uploader = require("../config/cloudinary");
+const Timeline = require("../models/Timeline");
 
-router.get("/:timelineId/event/create", (req, res, next) => {
-  const timelineId = req.params.timelineId;
-
-  res.render("create-event", { title: "Create New Event", timelineId });
+router.get("/:timelineId/event/create", async (req, res, next) => {
+  try {
+    const timelineId = req.params.timelineId;
+    const timeline = await Timeline.findById(timelineId);
+    const {category} = timeline
+    const data = {};
+    data.timelineId = timelineId;
+    if (category === "trips") data.isTrips = true;
+    if (category === "culture") data.isCulture = true;
+    if (category === "family") data.isFamily = true;
+    res.render("create-event", data);
+    
+  } catch (error) {
+    next(error);
+    
+  } 
+ 
 });
 
 router.post(
@@ -42,7 +56,8 @@ router.get("/event/:id/edit", async (req, res, next) => {
 router.post("/event/:id/edit", async (req, res, next) => {
   try {
     const eventId = req.params.id;
-    const event = await Event.findByIdAndUpdate(eventId, req.body);
+    console.log(req.body)
+    const event = await Event.findByIdAndUpdate(eventId, req.body, {new: true});
     res.redirect(`/timeline/event/details/${eventId}`);
   } catch (error) {
     next(error);

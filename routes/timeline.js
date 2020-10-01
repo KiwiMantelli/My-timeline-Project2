@@ -60,17 +60,6 @@ router.post("/:id/edit", async (req, res, next) => {
   }
 });
 
-/*router.get("/", (eafea){
-        // "trips"
-  const cat = req.qu  ery.category;
-  const data = {};
-  if(cat === "trips") data.isTrips = true;
-  if(cat === "bar") data.isBar = true;
-
-    data : {isTrips : true}
-  //res.render("vue", data)
-})*/
-
 router.get("/:id/display", async (req, res, next) => {
   timelineId = req.params.id;
   try {

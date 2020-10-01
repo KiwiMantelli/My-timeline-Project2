@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/KiwiMantelli/my-timeline-project2#readme",
   "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.1.9",
     "axios": "^0.20.0",
     "bcrypt": "^5.0.0",
     "cloudinary": "^1.23.0",
