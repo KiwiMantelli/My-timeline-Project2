@@ -37,6 +37,8 @@
     <input id="event-people" type="text" class="input" name="people" placeholder="people who was with you"
       value="{{event.people}}">
     {{/if}}
+
+    <input id="event-image" type="file" class="input" name="image" value="{{event.image}}">
     
     <button class="btn">Update!</button>
     <a href="/timeline/event/details/{{event._id}}" class="btn">Cancel</a>
