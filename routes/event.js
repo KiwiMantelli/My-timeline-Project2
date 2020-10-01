@@ -46,12 +46,11 @@ router.get("/event/:id/edit", async (req, res, next) => {
   try {
     const eventId = req.params.id;
     const event = await Event.findById(eventId);
-    
     const timeline = await Timeline.findById(event.timeline_id);
     const {category} = timeline
     const data = {};
     data.timelineId = event.timeline_id;
-    
+    data.event = event
     if (category === "trips") data.isTrips = true;
     if (category === "culture") data.isCulture = true;
     if (category === "family") data.isFamily = true;
@@ -64,6 +63,7 @@ router.get("/event/:id/edit", async (req, res, next) => {
 
 router.post("/event/:id/edit", uploader.single("image"), async (req, res, next) => {
   const editEvent = req.body;
+
   if (req.file) {
     editEvent.image = req.file.path;
   }

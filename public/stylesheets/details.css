@@ -19,17 +19,28 @@
   margin-bottom: 30px;
 }
 
+.img-event {
+  border: 7px solid black;
+}
+
 .details-img {
   margin-top: 50px;
+  margin-bottom: 20px;
   display: flex;
-
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .details{
   font-family: sue;
   font-size: 2em;
+  margin: auto 150px;
+}
+
+.details-buttons {
+  display:flex;
+  flex-direction: column;
+  justify-content: right;
 }
 
 #details-btn {

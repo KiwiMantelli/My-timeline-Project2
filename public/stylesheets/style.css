@@ -1,4 +1,4 @@
-
+@import './navbar.css';
 @import './home.css';
 @import './time_event_form.css';
 @import './signin-signup.css';
@@ -43,6 +43,16 @@ h1{
     border-radius: 19px;
 
   }
+
+  .btn:hover{
+      opacity: 75%;
+  }
+
+  a:hover{
+      opacity: 75%;
+
+  }
+
 
   .img-event{
       height: 300px;
