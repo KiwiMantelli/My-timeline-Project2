@@ -8,9 +8,10 @@ body {
   width: 100%;
   height: 100vh;
   background-image: url("/assets/skyline.jpg");
-  background-size: 100vh;
-  background-position: left;
+  background-size: 70vh;
+  background-position: 25% 60% ;
   background-repeat: no-repeat;
+
 }
 
 @media screen and (max-width: 600px) {
@@ -20,10 +21,10 @@ body {
 }
 
 #my-life {
-  position: absolute;
+  
   font-family: molle;
   font-size: 12vh;
-  margin: 5vh auto 0vh 10vh;
+  margin: 5vh 0 0 10vh;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -33,41 +34,29 @@ body {
   }
 }
 
-#line {
-  position: relative;
-  width: 125vh;
-  height: 0.5vh;
-  left: 0px;
-  top: 19vh;
-  background-color: #d09d7c;
-  border: 0vh solid #d09d7c;
+#line-ball{
+    background-image: url("/assets/line-ball-right.png");
+    background-position: 0 20%;
+    background-repeat: no-repeat;
+    background-size: 60vw;
+    text-align: center;
+    transform: translateY(-17%)
 }
 
+
 @media screen and (max-width: 600px) {
-  #line-ball {
+  #line {
     width: 60%;
   }
 }
 
-#ball {
-  position: absolute;
-  width: 2.5vh;
-  height: 2.5vh;
-  border-radius: 100%;
-  left: 124vh;
-  top: 25vh;
-  background-color: #d09d7c;
-  border: 0vh solid #d09d7c;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+
 
 #timeline {
-  position: relative;
-  font-family: sue;
+  font-weight: lighter;
   font-size: 12vh;
-  margin: 10vh auto 5vh 60vh;
-  height: 12vh;
   text-shadow: 6px 6px 7px #cfcbcb;
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -84,7 +73,8 @@ body {
   position: relative;
   font-family: sue;
   font-size: 5vh;
-  margin: auto auto 0vh 60vh;
+  margin-left: 55vh;
+  transform: translateY(-60%);
 }
 
 @media screen and (max-width: 600px) {
@@ -98,10 +88,9 @@ body {
 .display {
   height: 40vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  margin-top: 0%;
-  margin-bottom: 0%;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -114,12 +103,6 @@ body {
     
     }
 
-/* #home-skyline {
-  position: static;
-  height: 55vh;
-  margin-left: 20vh;
-  border-radius: 10%;
-} */
 
 #wanna-see {
   display: flex;

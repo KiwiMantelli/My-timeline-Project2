@@ -44,6 +44,16 @@ h1{
 
   }
 
+  .btn:hover{
+      opacity: 75%;
+  }
+
+  a:hover{
+      opacity: 75%;
+
+  }
+
+
   .img-event{
       height: 300px;
   }
