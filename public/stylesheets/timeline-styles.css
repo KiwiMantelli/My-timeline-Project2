@@ -129,3 +129,13 @@ h1.title {
     top: 15px;
     right: -20px;
 }
+
+.btn-add-event {
+    margin-left: 50px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.btn-add-event:hover {
+    opacity: 75%;
+}

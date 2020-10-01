@@ -53,11 +53,16 @@ router.get("/event/:id/edit", async (req, res, next) => {
   }
 });
 
-router.post("/event/:id/edit", async (req, res, next) => {
+router.post("/event/:id/edit", uploader.single("image"), async (req, res, next) => {
+  const editEvent = req.body;
+  if (req.file) {
+    editEvent.image = req.file.path;
+  }
   try {
     const eventId = req.params.id;
     console.log(req.body)
     const event = await Event.findByIdAndUpdate(eventId, req.body, {new: true});
+    const event = await Event.findByIdAndUpdate(eventId, editEvent);//voir avec Ailie
     res.redirect(`/timeline/event/details/${eventId}`);
   } catch (error) {
     next(error);

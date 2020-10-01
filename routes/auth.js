@@ -29,7 +29,7 @@ router.post("/signin", async (req, res, next) => {
       //console.log(req.session, "before defining current user");
       req.session.currentUser = userObject; 
       console.log(req.session);
-      req.flash("success", "Successfully logged in...");
+      req.flash("success", "Successfully logged in, welcome back!");
       res.redirect("/dashboard");
     }
   }
@@ -49,14 +49,13 @@ router.post("/signup", async (req, res, next) => {
     const foundUser = await User.findOne({ email: newUser.email });
 
     if (foundUser) {
-      console.log("email taken")
-      req.flash("error", "This email is taken");
-      res.render("signup", {error: "Email alreay taken"});
+      req.flash("error", "That email is already in use");
+      res.redirect("/signup");
     } else {
       const hashedPassword = bcrypt.hashSync(newUser.password, salt);
       newUser.password = hashedPassword;
       const user = await User.create(newUser);
-      req.flash("success", "Account created")
+      req.flash("success", "Account successfully created, please sign in!")
       res.redirect("/signin");
     }
   } catch (error) {
