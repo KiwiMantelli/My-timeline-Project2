@@ -8,7 +8,7 @@ background-attachment: fixed;
 }
 
 #timeline-section {
-    width: 500px;
+    width: 100%;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -95,6 +95,7 @@ h1.title {
 
 #card-image {
     height: 150px;
+    max-width: 200px;
     border: 1px solid black;
     padding: 5px;
     background-color: #FFF;
@@ -150,3 +151,51 @@ h1.title {
 .btn-add-event:hover {
     opacity: 75%;
 }
+
+/*MEDIA QUERIES*/
+/*
+@media (max-width : 768px) {
+   #card-image {
+       height: 110px;
+   }
+   .card-left {
+    left: 50px; 
+    }
+    .date-right {
+    right: 80px;
+    }
+   .card {
+       width: 180px;
+       height: 160px;
+       top: -60px;
+    }
+    .date {
+        font-size: 1rem;
+    }
+
+    h1.title {
+        font-size: 2rem;
+        padding-bottom: 3vh;
+    }
+
+    .btn-add-event {
+        padding: 5px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    #timeline-section {
+        padding-top: 100px;
+        align-items: flex-start;
+        margin-left: 50px;
+    }
+    .date {
+        display: none;
+    }
+  }
+  
+  @media (max-width : 1025px) {
+    .card {
+        width: 400px;
+    }
+  }
+  */
