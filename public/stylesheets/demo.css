@@ -45,8 +45,6 @@
 
 #demo-line {
     /* position: absolute; */
-    display: flex;
-    justify-content: center;
     width: 0.3vh;
     height: 45vh;
     margin-left: 0vh;
