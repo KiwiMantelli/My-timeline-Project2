@@ -99,6 +99,7 @@ h1.title {
     padding: 10px;
     height: 100%;
     width: 100%;
+    border-radius: 1rem;
 }
 
 .card-content p {

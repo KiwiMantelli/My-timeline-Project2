@@ -2,34 +2,43 @@
   <form method="post" action="/timeline/event/{{event._id}}/edit" class="event-form" enctype="multipart/form-data">
     <h3 class="form-title"> Edit an event</h3>
     {{>catEditPartials}}
+
+    {{#if isCulture}}
     <div class="form-item-rating">
       <label for="event-rating" class="label hidden">Rating:</label>
       <span class="rating">
-        <input type="radio" name="rating" id="str5" class="hidden" value="{{event.rating}}">
+        <input type="radio" name="rating" id="str5" value="{{event.rating}}">
         <label for="rating5"></label>
-        <input type="radio" name="rating" id="str4" class="hidden" value="{{event.rating}}">
+        <input type="radio" name="rating" id="str4" value="{{event.rating}}">
         <label for="rating4"></label>
-        <input type="radio" name="rating" id="str3" class="hidden" value="{{event.rating}}">
+        <input type="radio" name="rating" id="str3" value="{{event.rating}}">
         <label for="rating3"></label>
-        <input type="radio" name="rating" id="str2" class="hidden" value="{{event.rating}}">
+        <input type="radio" name="rating" id="str2" value="{{event.rating}}">
         <label for="rating2"></label>
-        <input type="radio" name="rating" id="str1" class="hidden" value="{{event.rating}}">
+        <input type="radio" name="rating" id="str1" value="{{event.rating}}">
         <label for="rating1"></label>
       </span>
     </div>
 
-    <input id="event-review" type="text" class="event-review input hidden" name="review" placeholder="give your opinion"
+    <input id="event-review" type="text" class="input" name="review" placeholder="give your opinion"
       value="{{event.review}}">
 
 
-    <input id="event-author" type="text" class="event-author input hidden" name="author" placeholder="director or author"
+    <input id="event-author" type="text" class="input" name="author" placeholder="director or author"
       value="{{event.author}}">
+    {{/if}}
 
-    <div class="map hidden">{{event.map}}</div>
+    {{#if isTrips}}
+    <input id="event-map" type="text" class="input" name="map" placeholder="place where you have been"
+      value="{{event.map}}">
+    {{/if}}
 
-    <input id="event-people" type="text" class="event-people input hidden" name="people" placeholder="people who was with you"
+    {{#if isFamily}}
+    <input id="event-people" type="text" class="input" name="people" placeholder="people who was with you"
       value="{{event.people}}">
-
-    <button class="btn">Create!</button>
+    {{/if}}
+    
+    <button class="btn">Update!</button>
+    <a href="/timeline/event/details/{{event._id}}" class="btn">Cancel</a>
   </form>
 </div>

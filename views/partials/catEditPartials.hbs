@@ -1,9 +1,9 @@
-<input id="event-title" type="text" class="input-text input" name="title" required placeholder="title"
+<input id="event-title" type="text" class="input" name="title" required placeholder="title"
   value="{{event.title}}">
 
-<input id="event-date" type="date" class="input-text input" name="date" required placeholder="DD/MM/YY"
+<input id="event-date" type="date" class="input" name="date" required placeholder="DD/MM/YY"
   value="{{#formatDateInput event.date}}{{/formatDateInput}}">
 
-<textarea id="event-descr" rows="4" cols="50" maxlength="1000" class="input-text input" name="description" required placeholder="ex: amazing trip">{{event.description}}</textarea>
+<textarea id="event-descr" rows="4" cols="50" maxlength="1000" class="input" name="description" required placeholder="ex: amazing trip">{{event.description}}</textarea>
 
-<input id="event-image" type="file" class="event-image input" name="image" value="{{event.image}}">
+<input id="event-image" type="file" class="input" name="image" value="{{event.image}}">
