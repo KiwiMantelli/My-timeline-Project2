@@ -60,9 +60,7 @@ router.post("/event/:id/edit", uploader.single("image"), async (req, res, next) 
   }
   try {
     const eventId = req.params.id;
-    console.log(req.body)
-    const event = await Event.findByIdAndUpdate(eventId, req.body, {new: true});
-    // const event = await Event.findByIdAndUpdate(eventId, editEvent);//voir avec Ailie
+    const event = await Event.findByIdAndUpdate(eventId, editEvent, {new: true});
     res.redirect(`/timeline/event/details/${eventId}`);
   } catch (error) {
     next(error);

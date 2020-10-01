@@ -7,11 +7,12 @@ window.addEventListener('load', () => {
         const fullPathName = window.location.pathname;
         const timelineId = fullPathName.slice(10, -8);
         console.log(timelineId);
-        axios.get(`http://localhost:3000/timeline/getEvents/timelineId`)
+        axios.get(`/timeline/getEvents/timelineId`)
         .then(res => {
             const data = res.data;
             displayEvents(data);
-            console.log(data)});
+            console.log(data)})
+            .catch(error=> console.log(error));
     }
     getEvents();
 
