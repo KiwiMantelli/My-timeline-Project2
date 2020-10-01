@@ -1,23 +1,41 @@
 
-.event-detail {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .title-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Boogaloo;
   letter-spacing: 0.25rem;
   font-size: 3rem;
+  margin-top: 30px;
+}
+
+#date-event {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Boogaloo;
+  font-size: 1.5rem;
   margin-bottom: 30px;
 }
 
+.details-img {
+  margin-top: 50px;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
 .details{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  font-family: sue;
+  font-size: 2em;
+}
+
+#details-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn a{
