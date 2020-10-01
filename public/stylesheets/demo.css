@@ -14,7 +14,7 @@
     background-image: url('/assets/skyline.png');
     background-size: 40vw;
     background-repeat: no-repeat;
-    background-position: 100%  -18%;
+    background-position: 100%  -40%;
 
 }
 
@@ -40,8 +40,9 @@
 #lets {
     text-decoration: none;
     color: black;
+    margin: 50vh 0 10vh 10vh;
     padding: 10px 20px;
-    margin: auto;
+   
 }
 
 
@@ -50,7 +51,7 @@
     width: 0.3vh;
     height: 45vh;
     margin-left: 55vh;
-    margin-top: 10vh;
+    margin-top: 9vh;
     background-color: #D09D7C;
     border: 0vh solid #D09D7C;
 }
