@@ -8,7 +8,7 @@
             {{#each timelines}}
             <tr>
                 <td class="category">{{this.category}}</td>
-                <td class="tl-dash-title">{{this.name}}</td>
+                <td class="tl-dash-title"><a href="timeline/{{this._id}}/display">{{this.name}}</a></td>
                 <td id="eye" data-id="{{this._id}}"><a href="timeline/{{this._id}}/display"><img class="icon"
                             src="/assets/eye.png" alt="icon view" /></td>
                 <td data-id="{{this._id}}" class="edit"><a href="/timeline/{{this._id}}/edit"><img class="icon"
