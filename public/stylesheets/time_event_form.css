@@ -23,9 +23,6 @@
   justify-content: center;
   align-items: center;
 }
-/* .hidden{
-    display: none;
-} */
 
 .event-form {
   display: flex;
@@ -50,7 +47,7 @@
   color: grey
 }
 
-.input, .form-item-rating {
+.form-item-rating {
   width: 50%;
   border-radius: 10px;
   padding: 10px;
