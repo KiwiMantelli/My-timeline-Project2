@@ -10,13 +10,13 @@
             <p>{{idDetails.author}}</p>
             <p>{{idDetails.map}}</p>
             <p>With {{idDetails.people}}</p>
-        </div>
-    </div>
-    <div>
+    <div id="details-buttons">
         <a href="/timeline/event/{{idDetails._id}}/edit"><img src="/assets/edit-icon.png" class="icon"
                 alt="edit icon" /></a>
         <a href="/timeline/event/{{idDetails._id}}/delete"><img src="/assets/delete-icon.png" class="icon"
                 alt="delete icon" /></a>
+                <button id="details-btn" class="btn"><a href="/timeline/{{idDetails.timeline_id}}/display">Go back</a></button>
+    </div>
     </div>
 
-    <button id="details-btn" class="btn"><a href="/timeline/{{idDetails.timeline_id}}/display">Go back</a></button>
+    
