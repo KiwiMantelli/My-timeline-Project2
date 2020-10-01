@@ -2,6 +2,8 @@
   <form method="post" action="/timeline/event/{{event._id}}/edit" class="event-form" enctype="multipart/form-data">
     <h3 class="form-title"> Edit an event</h3>
     {{>catEditPartials}}
+
+    {{#if isCulture}}
     <div class="form-item-rating">
       <label for="event-rating" class="label hidden">Rating:</label>
       <span class="rating">
@@ -24,12 +26,18 @@
 
     <input id="event-author" type="text" class="input" name="author" placeholder="director or author"
       value="{{event.author}}">
+    {{/if}}
 
-    <div class="map hidden">{{event.map}}</div>
+    {{#if isTrips}}
+    <input id="event-map" type="text" class="input" name="map" placeholder="place where you have been"
+      value="{{event.map}}">
+    {{/if}}
 
+    {{#if isFamily}}
     <input id="event-people" type="text" class="input" name="people" placeholder="people who was with you"
       value="{{event.people}}">
-
+    {{/if}}
+    
     <button class="btn">Update!</button>
     <a href="/timeline/event/details/{{event._id}}" class="btn">Cancel</a>
   </form>

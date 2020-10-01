@@ -45,9 +45,18 @@ router.post(
 router.get("/event/:id/edit", async (req, res, next) => {
   try {
     const eventId = req.params.id;
-    console.log(eventId);
     const event = await Event.findById(eventId);
-    res.render("edit-event", { title: "Edit Event", event: event });
+    
+    const timeline = await Timeline.findById(event.timeline_id);
+    const {category} = timeline
+    const data = {};
+    data.timelineId = event.timeline_id;
+    
+    if (category === "trips") data.isTrips = true;
+    if (category === "culture") data.isCulture = true;
+    if (category === "family") data.isFamily = true;
+    console.log(data);
+    res.render("edit-event", data);
   } catch (error) {
     next(error);
   }
