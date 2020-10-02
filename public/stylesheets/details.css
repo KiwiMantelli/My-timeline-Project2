@@ -20,36 +20,28 @@
 }
 
 .img-event {
+  margin-left: 100px;
   border: 7px solid black;
 }
 
 .details-img {
   margin-top: 50px;
-  margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: top;
 }
 
 .details{
   font-family: sue;
   font-size: 2em;
-  margin: auto 150px;
+  margin: auto 100px 0px 50px;
 }
 
-.details-buttons {
-  display:flex;
-  flex-direction: column;
-  justify-content: right;
+#details-buttons {
+  margin-left: 70%;
+  margin-bottom: 200px;
 }
 
-#details-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn a{
-    text-decoration: none;
-    color: black;
+.details-icon {
+  padding-left: 0 50px;
 }
