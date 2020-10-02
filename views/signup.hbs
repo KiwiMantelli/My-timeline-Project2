@@ -2,7 +2,7 @@
 
 
   <form method="post" action="/signup" class="user_form">
-    <h1 id="create-title" class="form-title">Create your account</h1>
+    <h1 id="create-title">Create your account</h1>
 
     {{>flashMessage}}
     <div class="form-item-wrapper">
@@ -18,11 +18,12 @@
     <div class="form-item-wrapper">
       <input id="password" type="password" name="password" class="input" placeholder="Password" required>
     </div>
-    <button class="btn" class="btn-signup">Sign up</button>
+    <button class="btn btn-signup">Sign up</button>
+    <p class="form-sub-infos">Already have an account ? <a href="/signin">Sign In</a></p>
   </form>
-  <p class="form-sub-infos">Already have an account ? <a href="/signin" class="button-link-form">Sign In</a></p>
-<hr class="su-form-line"">
-<div class="su-form-ball"></div>
+  
+
+
 <div class="su-form-blue-ball"></div>
 <div class="su-form-pink-ball"></div>
 </section>
