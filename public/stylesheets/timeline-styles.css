@@ -154,20 +154,33 @@ h1.title {
 
 /*MEDIA QUERIES*/
 
+@media (max-width : 600px) {
+    
+    .card-left {
+        left: 50px; 
+    }
+    .date-right {
+        right: 80px;
+    }
+    .date {
+        display: none;
+    }
+    #timeline-section {
+        padding-top: 100px;
+        align-items: flex-start;
+        margin-left: 50px;
+    }
+}
+
 @media (max-width : 768px) {
    #card-image {
        height: 110px;
    }
-   .card-left {
-    left: 50px; 
-    }
-    .date-right {
-    right: 80px;
-    }
+   
    .card {
-       width: 180px;
-       height: 160px;
-       top: -60px;
+       width: 160px;
+       height: 140px;
+       top: -70px;
     }
     .date {
         font-size: 1rem;
@@ -183,19 +196,20 @@ h1.title {
         font-size: 20px;
         margin-top: 20px;
     }
-    #timeline-section {
-        padding-top: 100px;
-        align-items: flex-start;
-        margin-left: 50px;
+    
+    .card-title {
+        font-size: 1.5rem;
     }
-    .date {
-        display: none;
+
+    .card-content a, .card-content p {
+        font-size: 1rem;
     }
+    
   }
   
   @media (max-width : 1025px) {
     .card {
-        width: 400px;
+        width: 360px;
     }
   }
   
