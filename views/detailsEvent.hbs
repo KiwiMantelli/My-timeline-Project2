@@ -6,16 +6,31 @@
         <div class="details">
             <span>{{idDetails.rating}}</span>
             <p>{{idDetails.description}}</p>
-            <p>{{idDetails.review}}</p>
-            <p>{{idDetails.author}}</p>
-            <p>{{idDetails.map}}</p>
-            <p>With {{idDetails.people}}</p>
+            <br>
+
+            {{#if idDetails.review}}
+            <p><strong>My Review: </strong>{{idDetails.review}}</p>
+            {{/if}}
+
+            {{#if idDetails.author}}
+            <p><strong>Director or Author: </strong>{{idDetails.author}}</p>
+            {{/if}}
+
+            {{#if idDetails.map}}
+            <p><strong>Location: </strong>{{idDetails.map}}</p>
+            {{/if}}
+
+            {{#if idDetails.people}}
+            <p><strong>With: </strong>{{idDetails.people}}</p>
+            {{/if}}
+            <br>
+
     <div id="details-buttons">
+            <a href="/timeline/{{idDetails.timeline_id}}/display" class="btn">Go back</a>
         <a href="/timeline/event/{{idDetails._id}}/edit"><img src="/assets/edit-icon.png" class="icon"
                 alt="edit icon" /></a>
         <a href="/timeline/event/{{idDetails._id}}/delete"><img src="/assets/delete-icon.png" class="icon"
                 alt="delete icon" /></a>
-               <a href="/timeline/{{idDetails.timeline_id}}/display" class="btn">Go back</a>
     </div>
     </div>
 

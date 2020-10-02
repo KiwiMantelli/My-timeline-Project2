@@ -1,28 +1,29 @@
 
 #demo-header {
-    position: absolute;
     font-family: molle;
     font-size: 8vh;
     margin: 5vh auto 0vh 10vh;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 
 .demo{
     display: flex;
     flex-direction: row;
-    flex: 2;
-    background-image: url('/assets/skyline.jpg');
-    background-size: 35vw;
+    background-image: url('/assets/skyline.png');
+    background-size: 40vw;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: 100%  -18%;
 
 }
 
 #demo-description {
+    display: flex; 
+    flex-direction: column;
     font-family: sue;
     font-size: 4vh;
-    margin-top: 20vh;
+    margin-top: 5vh;
     margin-left: 60vh;
 }
 
@@ -40,15 +41,16 @@
     text-decoration: none;
     color: black;
     padding: 10px 20px;
+    margin: auto;
 }
 
 
 #demo-line {
-    /* position: absolute; */
+    position: absolute;
     width: 0.3vh;
     height: 45vh;
-    margin-left: 0vh;
-    margin-top: 23vh;
+    margin-left: 55vh;
+    margin-top: 10vh;
     background-color: #D09D7C;
     border: 0vh solid #D09D7C;
 }

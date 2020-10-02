@@ -33,6 +33,7 @@ const months = ["Months","January","February","March","April","May","June","July
 
 function displayEvents(events) {
     for(let i =0; i < events.length; i++) {
+        const shortDesc = events[i].description.substr(0,32); 
         const year = events[i].date.slice(0,4);
         const month = months[Number(events[i].date.slice(5,7))];
         const day = events[i].date.slice(8,10);
@@ -46,7 +47,7 @@ function displayEvents(events) {
                         <img src="${events[i].image}" alt="placeholder image" id="card-image">
                         <div class="card-content">
                             <h3 class="card-title">${events[i].title}</h3>
-                            <p>${events[i].description}</p>
+                            <p>${shortDesc}...</p>
                             <a href="/timeline/event/details/${events[i]._id}">See more</a>
                         </div>
                     </div>
@@ -64,7 +65,7 @@ function displayEvents(events) {
                         <img src="${events[i].image}" alt="placeholder image" id="card-image">
                         <div class="card-content">
                             <h3 class="card-title">${events[i].title}</h3>
-                            <p>${events[i].description}</p>
+                            <p>${shortDesc}...</p>
                             <a href="/timeline/event/details/${events[i]._id}">See more</a>
                         </div>
                     </div>
