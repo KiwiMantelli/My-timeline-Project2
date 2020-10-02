@@ -5,10 +5,17 @@
     {{#if timelines}}
     <table class="table">
         <tbody>
+            <thead>
+                <th colspan="1">Category</th>
+                <th colspan="4">Timeline Name</th>
+                <th colspan="1">See Details</th>
+                <th colspan="1">Edit Timeline</th>
+                <th colspan="1">Delete Timeline</th>
+            </thead>
             {{#each timelines}}
             <tr>
                 <td class="category">{{this.category}}</td>
-                <td class="tl-dash-title"><a href="timeline/{{this._id}}/display">{{this.name}}</a></td>
+                <td colspan="4"  class="tl-dash-title"><a href="timeline/{{this._id}}/display">{{this.name}}</a></td>
                 <td id="eye" data-id="{{this._id}}"><a href="timeline/{{this._id}}/display"><img class="icon"
                             src="/assets/eye.png" alt="icon view" /></td>
                 <td data-id="{{this._id}}" class="edit"><a href="/timeline/{{this._id}}/edit"><img class="icon"
@@ -21,7 +28,6 @@
     </table>
     {{/if}}
     <div id="display-right">
-        <img id="dash-img" src="/assets/skyline.jpg" alt="skyline" />
-        <button id="create-timeline" class="btn"><a href="/timeline/create">Create a timeline</a></button>
+        <button id="create-timeline" class="btn"><a href="/timeline/create">Create a new timeline</a></button>
     </div>
 </div>
