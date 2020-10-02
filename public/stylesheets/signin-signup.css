@@ -1,10 +1,13 @@
 .container-sign {
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.sign-in {
+  margin-top: 30px;
 }
 
 .user_form {
@@ -13,6 +16,12 @@
   align-items: center;
   width: 60%;
   height: 70vh;
+}
+
+@media screen and (max-width: 600px) {
+  .user_form {
+    margin-top: 20px;
+  }
 }
 
 .form-item-wrapper {
@@ -37,17 +46,6 @@
   font-size: 3.5vh;
 }
 
-#btn-signin {
-  margin-bottom: 0px;
-  margin-top: 30px;
-}
-
-@media screen and (max-width: 600px){
-.user_form .btn{
-  font-size: 20px;
-}
-}
-
 .form-sub-infos {
   font-family: Boogaloo;
   font-size: 20px;
@@ -59,6 +57,26 @@
     margin-top: 35px;
   }
 }
+
+.form-margin {
+  margin-bottom: 20px;
+}
+
+#create-title {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  #create-title {
+    font-size: 30px;
+  }
+  .form-title{
+    font-size: 30px;
+  }
+}
+
+
 
 .flash-msg {
   font-family: Boogaloo;
@@ -74,9 +92,10 @@
 }
 
 .form-big-blue-ball {
+  display: block;
   position: absolute;
-  margin-bottom: 50vh;
-  margin-left: 105vh;
+  margin-bottom: 30vh;
+  margin-left: 110vh;
   width: 25vh;
   height: 25vh;
   background-color: #9db7b8;
@@ -85,9 +104,10 @@
 }
 
 .form-big-pink-ball {
+  display: block;
   position: absolute;
-  margin-bottom: 62vh;
-  margin-left: 125vh;
+  margin-bottom: 40vh;
+  margin-left: 130vh;
   width: 15vh;
   height: 15vh;
   background-color: #ffd1b3;
@@ -95,18 +115,14 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.form-margin {
-  margin-bottom: 20px;
-}
-
-#create-title {
-  margin-top: 20px;
-  margin-bottom: 0px;
-}
-
-@media screen and (max-width: 600px){
-  #create-title{
-    font-size: 30px;
+@media screen and (max-width: 600px) {
+  .form-big-blue-ball {
+    display: none;
+    position: relative;
+  }
+  .form-big-pink-ball {
+    display: none;
+    position: relative;
   }
 }
 
@@ -144,7 +160,7 @@
     position: relative;
   }
 
-  .user_form input{
+  .user_form input {
     width: 50vw;
   }
 }
