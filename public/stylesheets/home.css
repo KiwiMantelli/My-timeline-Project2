@@ -1,3 +1,5 @@
+
+
 #my-life {
   font-family: molle;
   font-size: 12vh;
@@ -31,13 +33,14 @@
 .display {
   height: 40vh;
   display: flex;
-  justify-content: right;
+  justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  background-image: url("/assets/skyline.jpg");
-  background-size: 70vh;
-  background-position: 25% 60%;
-  background-repeat: no-repeat;
+}
+
+#home-skyline {
+  height: 24vw;
+  padding-bottom: 8vh;
 }
 
 #wanna-see {
@@ -45,7 +48,6 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  margin-right: 15%;
 }
 
 #teaser {
@@ -66,6 +68,7 @@
 #wanna-see-text {
   font-family: boogaloo;
   font-size: 6vh;
+  padding-top: 4vh;
 }
 
 #check {
@@ -76,34 +79,55 @@
   color: black;
 }
 
+/*MEDIA QUERIES*/
+
 @media screen and (max-width: 1000px) {
   #my-life {
-    font-size: 5vh;
+    font-size: 7vh;
   }
   #timeline {
-    font-size: 5vh;
+    font-size: 10vh;
   }
   .line-ball {
     width: 20vw;
   }
   #slogan {
-    font-size: 3vh;
+    font-size: 4vh;
     text-align: center;
     margin: auto;
     transform: translateY(0);
-    
+    padding: auto;
   }
+  .display {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  }
+
+  #home-skyline {
+    position: absolute;
+    height: 45vw;
+  }
+
   #wanna-see{
+    position: relative;
       align-items: center;
+      margin-top: 35vh;
   }
   #wanna-see-ball {
     width: 20vh;
     height: 20vh;
   }
   #wanna-see-text{
-      font-size: 3vh;
+      font-size: 4vh;
   }
   #check{
-      font-size: 3vh ;
+      font-size: 4vh ;
   }
+}
+
+#teaser {
+  margin-bottom: 2vw;
 }
