@@ -34,7 +34,6 @@
 }
 
 .form-title {
-  margin-bottom: 15px;
   font-family: "sue";
   font-size: 50px;
 }
@@ -47,7 +46,7 @@
   color: grey
 }
 
-.form-item-rating {
+/*.form-item-rating {
   width: 50%;
   border-radius: 10px;
   padding: 10px;
@@ -63,9 +62,9 @@
   float:left;
 }
 
-/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+:not(:checked) is a filter, so that browsers that don’t support :checked don’t 
  follow these rules. Every browser that supports :checked also supports :not(), so
- it doesn’t make the test unnecessarily selective */
+ it doesn’t make the test unnecessarily selective 
  .rating:not(:checked) > input {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -117,6 +116,7 @@
   top:2px;
   left:2px;
 }
+*/
 
 .formfield-select {
   position: relative;
@@ -207,6 +207,7 @@ border-radius: 20px;
   }
   .form-title {
     font-size: 40px;
+    margin: 0px;
   }
 }
 
@@ -217,5 +218,9 @@ border-radius: 20px;
   }
   .timeline-form {
     margin-bottom: 20vh;
+  }
+  .big-container {
+    background-position: left top;
+    background-size: 33vw;
   }
 }
