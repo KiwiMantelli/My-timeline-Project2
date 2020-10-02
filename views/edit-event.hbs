@@ -4,7 +4,7 @@
     {{>catEditPartials}}
 
     {{#if isCulture}}
-    <div class="form-item-rating">
+    {{!-- <div class="form-item-rating">
       <label for="event-rating" class="label hidden">Rating:</label>
       <span class="rating">
         <input type="radio" name="rating" id="str5" value="{{event.rating}}">
@@ -18,7 +18,7 @@
         <input type="radio" name="rating" id="str1" value="{{event.rating}}">
         <label for="rating1"></label>
       </span>
-    </div>
+    </div> --}}
 
     <input id="event-review" type="text" class="input" name="review" placeholder="give your opinion"
       value="{{event.review}}">
@@ -39,8 +39,10 @@
     {{/if}}
 
     <input id="event-image" type="file" class="input" name="image" value="{{event.image}}">
-    
-    <button class="btn">Update!</button>
-    <a href="/timeline/event/details/{{event._id}}" class="btn">Cancel</a>
+    <div class="btn-event">
+      <button class="btn">Update!</button>
+      <a href="/timeline/event/details/{{event._id}}" class="btn">Cancel</a>
+    </div>
+
   </form>
 </div>

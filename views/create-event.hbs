@@ -5,11 +5,11 @@
     {{> catCreatePartials}}
 
     {{#if isTrips}}
-   <input id="event-map" type="text" class="input" name="map"  placeholder="place where you have been">
+    <input id="event-map" type="text" class="input" name="map" placeholder="place where you have been">
     {{/if}}
 
     {{#if isCulture}}
- <!--   <div class="form-item-rating">
+    <!--   <div class="form-item-rating">
       <label for="event-rating">Rating:</label>
       <span class="rating">
         <input type="radio" name="rating" id="str5">
@@ -26,20 +26,21 @@
     </div>
     -->
 
-    <input id="event-review" type="text" class="input" name="review"
-      placeholder="give your opinion">
+    <input id="event-review" type="text" class="input" name="review" placeholder="give your opinion">
 
-    <input id="event-author" type="text" class="input" name="author"
-      placeholder="director or author">
+    <input id="event-author" type="text" class="input" name="author" placeholder="director or author">
     {{/if}}
 
     {{#if isFamily}}
-    <input id="event-people" type="text" class="input" name="people"
-      placeholder="ex: people who was with you">
+    <input id="event-people" type="text" class="input" name="people" placeholder="ex: people who was with you">
     {{/if}}
 
     <input id="event-image" type="file" class="input" name="image">
 
-    <button class="btn">Create!</button>
+
+    <div class="btn-event">
+      <button class="btn">Create!</button>
+      <a href="/timeline/{{timelineId}}/display" class="btn">Cancel</a>
+    </div>
   </form>
 </div>

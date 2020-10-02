@@ -1,3 +1,4 @@
+/*Event form*/
 .big-container {
   background-color: #EDEADB;
   background-image: url("/assets/skyline.jpg");
@@ -11,18 +12,7 @@
   align-items: center;
 }
 
-.big-container-timeline {
-  background-color: #EDEADB;
-  background-image: url("/assets/skyline.jpg");
-  background-size: 50vw;
-  background-position: left;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .event-form {
   display: flex;
@@ -44,6 +34,15 @@
   text-align: left;
   justify-content: center;
   color: grey
+}
+
+.btn-event{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 60%;
+  margin-top: 20px;
+ 
 }
 
 /*.form-item-rating {
@@ -117,6 +116,20 @@
   left:2px;
 }
 */
+
+/*Timeline Form*/
+.big-container-timeline {
+  background-color: #EDEADB;
+  background-image: url("/assets/skyline.jpg");
+  background-size: 50vw;
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .formfield-select {
   position: relative;
@@ -223,4 +236,5 @@ border-radius: 20px;
     background-position: left top;
     background-size: 33vw;
   }
+
 }
