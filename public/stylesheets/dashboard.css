@@ -30,16 +30,13 @@
 #display-dashboard {
     display: flex;
     justify-content: space-between;
+    background-color: #EDEADB;
+    background-image: url("/assets/skyline.jpg");
+    background-size: 30vw;
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
-@media (max-width: 500px){
-    #display-dashboard{
-       padding: 4vh;
-       background-color: red;
-       margin: 2vh;
-      
-    }
-}
 
 .table {
     background-color: white;
@@ -56,23 +53,34 @@
     color: #9DB7B8;
 }
 
-.table tbody tr >td {
-    text-align: left;
-    padding-left: 5vh;
+.table td {
+    max-width: 500px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.table a {
+    text-decoration: none;
+    color: #C95455;
+}
+
+.table th {
+    font-family: "sue";
+    font-size: 20px;
 }
 
 .tl-dash-title {
     font-family: boogaloo;
-    font-size: 5vh;
-    color: #C95455;
+    font-size: 25px;
 }
 
 .icon {
     height: 4vh;
 }
-#eye {
-    padding-left: 30vh;
-}
+
 
 #display-right {
     display:flex;
@@ -89,5 +97,14 @@
 }
 
 #create-timeline {
-    margin-right: 10vh;
+    margin-right: 15vh;
+    margin-top: 20vh;
+}
+
+@media (max-width: 500px){
+   
+}
+
+@media (max-width : 992px) {
+    
 }
